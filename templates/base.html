@@ -11,35 +11,42 @@
 </head>
 
 <body>
-  <nav class="blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">QuickHop</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav class="blue lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">QuickHop</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Help</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Help</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-file-cloud"></i></a>
+      </div>
+    </nav>
+  </div>
 
 
 {% block content %}{% endblock %}
 
 
-  <footer class="page-footer orange">
+  <footer class="page-footer brown lighten-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="brown-text text-darken-2">QuickHop needs you!</h5>
+          <p class="brown-text text-lighten-5">
+          QuickHop is a free service, built and maintained by a single person, for the benefit of everyone.
+          Please consider a donation of any amount to help keep this app up and running. Thanks!
+          </p>
+          <a href="#" class="waves-effect waves-light btn brown darken-2">Donate Now</a>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Built by <a class="brown-text text-darken-1" href="https://github.com/briandwendt">Brian D. Wendt</a>
       </div>
     </div>
   </footer>

@@ -3,9 +3,15 @@
 
     $('.button-collapse').sideNav();
 
+    $('select').material_select();
+
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15 // Creates a dropdown of 15 years to control year
+        selectYears: 3, // Creates a dropdown to control year
+        closeOnSelect: true,
+        closeOnClear: true,
+        format: 'mmm d, yyyy',
+        formatSubmit: 'yyyy-mm-dd'
     });
 
   }); // end of document ready

@@ -13,11 +13,13 @@ app.config['SECRET_KEY'] = CSRF_SECRET_KEY
 # the App Engine WSGI application server.
 
 
-@app.route('/')
+@app.route('/', methods=('GET', 'POST'))
 def search():
     """The main flights search page."""
     form = FindFlights()
-    return render_template('search.html', form = form)
+    if form.validate_on_submit():
+        return redirect('/flights')
+    return render_template('search.html', form=form)
 
 
 @app.errorhandler(404)

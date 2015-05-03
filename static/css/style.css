@@ -2,6 +2,24 @@
   padding: 0;
 }
 
+nav .brand-logo {
+ font-weight: 200;
+}
+
+#origin, #destination {
+ text-transform: uppercase;
+}
+
+ul.errors {
+ margin: 0;
+ padding: 0;
+}
+ul.errors li {
+ color: #f44336;  /* red = invalid */
+ font-size: 0.7rem;
+ line-height: 0.1em
+}
+
 /* label color */
 .input-field label {
  /*color: #000;*/
