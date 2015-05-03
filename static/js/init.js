@@ -10,7 +10,9 @@
         selectYears: 3, // Creates a dropdown to control year
         closeOnSelect: true,
         closeOnClear: true,
-        format: 'yyyy-mm-dd'
+        editable: false,
+        format: 'yyyy-mm-dd',
+        formatSubmit: 'yyyy-mm-dd'
     });
 
   }); // end of document ready

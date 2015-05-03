@@ -14,7 +14,7 @@
 
   <div class="navbar-fixed">
     <nav class="blue lighten-1" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">QuickHop</a>
+      <div class="nav-wrapper container"><a id="logo-container" href="{{ url_for('search') }}" class="brand-logo">QuickHop</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#">Help</a></li>
         </ul>
@@ -31,12 +31,12 @@
 {% block content %}{% endblock %}
 
 
-  <footer class="page-footer brown lighten-2">
+  <footer class="page-footer orange lighten-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="brown-text text-darken-3">QuickHop Needs You!</h5>
-          <p class="brown-text text-lighten-5">
+          <h5 class="brown-text">QuickHop Needs You!</h5>
+          <p class="brown-text text-lighten-2">
           QuickHop is a free service, built and maintained by a single person, for the benefit of everyone.
           Please consider a donation of any amount to help keep this app up and running. Thanks!
           </p>
@@ -46,7 +46,8 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Built by <a class="brown-text text-darken-2" href="https://github.com/briandwendt">Brian D. Wendt</a>
+      <span class="brown-text text-lighten-2">Built by</span>
+      <a class="brown-text text-darken-2" href="https://github.com/briandwendt">Brian D. Wendt</a>
       </div>
     </div>
   </footer>
