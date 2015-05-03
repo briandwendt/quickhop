@@ -1,16 +1,13 @@
 from flask_wtf import Form
-from wtforms import StringField, SelectField, DateField
-from wtforms.validators import InputRequired, Length
+from wtforms import StringField, SelectField, DateField, SubmitField
+from wtforms.validators import Length
+from datetime import date
 
 class FindFlights(Form):
     origin = StringField('Departure Airport Code', validators=[
-        InputRequired(),
-        Length(min=3, max=3, message=(u'Must be a 3-letter IATA code (e.g., BOS)'))
+        Length(min=3, max=3, message=(u'Must be a 3-letter IATA code.'))
     ])
     destination = StringField('Arrival Airport Code', validators=[
-        InputRequired(),
-        Length(min=3, max=3, message=(u'Must be a 3-letter IATA code (e.g., DEN)'))
+        Length(min=3, max=3, message=(u'Must be a 3-letter IATA code.'))
     ])
-    date = DateField('Date', format='%Y-%m-%d', validators=[
-        InputRequired()
-    ])
+    date = DateField('Date', default=date.today())

@@ -3,52 +3,60 @@
 {% block title %}QuickHop - Find Flights Fast{% endblock %}
 
 {% block content %}
-<div class="section no-pad-bot" id="index-banner">
+<div class="section no-pad-bot">
   <div class="container">
-    <h5 class="header center orange-text text-darken-2">Find Flights Fast</h5>
-
     <div class="row">
-      <form class="col s12 m8 offset-m2" method="POST" action="/">
-        {{ form.csrf_token }}
+      <div class="col s12 m8 offset-m2">
+        <div class="card-panel">
 
-        <div class="row">
-          <div class="input-field col s6">
-            {{ form.origin(class_="validate", placeholder="SFO") }}
-            {{ form.origin.label }}
-            {% if form.origin.errors %}
-              <ul class="errors">
-              {% for error in form.origin.errors %}
-                <li>{{ error }}</li>
-              {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-          <div class="input-field col s6">
-            {{ form.destination(class_="validate", placeholder="JFK") }}
-            {{ form.destination.label }}
-            {% if form.destination.errors %}
-              <ul class="errors">
-              {% for error in form.destination.errors %}
-                <li>{{ error }}</li>
-              {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-        </div>
+          <h5 class="header center orange-text text-darken-1">
+          Find Flights Fast
+          </h5><br>
 
-        <div class="row">
-          <div class="input-field col s6">
-            {{ form.date(class_="datepicker", value="May 3, 2015") }}
-            {{ form.date.label }}
-          </div>
-        </div>
+          <form method="POST">
+            {{ form.csrf_token }}
 
-        <div class="center-align">
-          <button class="btn-large waves-effect waves-light orange darken-2" type="submit" name="action">
-            <i class="mdi-action-search left"></i>Search
-          </button>
+            <div class="row">
+              <div class="input-field col s6">
+                {{ form.origin(class_="validate", placeholder="SFO") }}
+                {{ form.origin.label }}
+                {% if form.origin.errors %}
+                  <ul class="errors">
+                  {% for error in form.origin.errors %}
+                    <li>{{ error }}</li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+              <div class="input-field col s6">
+                {{ form.destination(class_="validate", placeholder="JFK") }}
+                {{ form.destination.label }}
+                {% if form.destination.errors %}
+                  <ul class="errors">
+                  {% for error in form.destination.errors %}
+                    <li>{{ error }}</li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                {{ form.date(class_="datepicker") }}
+                {{ form.date.label }}
+              </div>
+            </div>
+
+            <div class="center-align">
+              <button class="btn-large waves-effect waves-light orange" type="submit">
+                <i class="mdi-action-search left"></i>Search
+              </button>
+            </div>
+          </form>
+
         </div>
-      </form>
+      </div>
     </div>
 
   </div>
