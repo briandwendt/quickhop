@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}QuickHop - Find Flights Fast{% endblock %}
+
+{% block content %}
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <h5 class="header center orange-text">Find Flights Fast</h5>
+
+    <div class="row">
+      <form class="col s12 m8 offset-m2" method="POST" action="/">
+        {{ form.csrf_token }}
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="mdi-image-filter-1 prefix"></i>
+            {{ form.origin(class_="validate", placeholder="SFO") }}
+            {{ form.origin.label }}
+          </div>
+          <div class="input-field col s6">
+            <i class="mdi-image-filter-2 prefix"></i>
+            {{ form.destination(class_="validate", placeholder="JFK") }}
+            {{ form.destination.label }}
+          </div>
+        </div>
+
+        <input type="date" class="datepicker">
+
+
+        <div class="center-align">
+          <button class="btn-large waves-effect waves-light orange" type="submit" name="action">
+            <i class="mdi-action-search left"></i>Search
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
