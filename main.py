@@ -16,31 +16,51 @@ app.config['CSRF_ENABLED'] = True
 app.config['SECRET_KEY'] = CSRF_SECRET_KEY
 
 
-# Note: We don't need to call run() since our application is embedded within
-# the App Engine WSGI application server.
-
-
+# Define the routes
 @app.route('/', methods=('GET', 'POST'))
 def search():
     """The main flights search page."""
+
+    # Forms are in forms.py
     form = FindFlights()
+
+    # If the completed form validates, show the flights list
     if request.method == 'POST' and form.validate_on_submit():
+        flash("Successfully validated!")
         return redirect(url_for('flights',
             origin = request.form['origin'].upper(),
             destination = request.form['destination'].upper(),
-            date = request.form['date']))
+            year = request.form['year'],
+            month = request.form['month'],
+            day = request.form['day']))
+
+    # Render the flights search form
+    flash(form.errors)
     return render_template('search.html', form=form)
 
 
-@app.route('/flights/<origin>/<destination>/<date>/')
-def flights(origin, destination, date):
+@app.errorhandler(404)
+def page_not_found(e):
+    """Return a custom 404 error."""
+    return 'Sorry, nothing at this URL.', 404
+
+
+@app.route('/flights/<origin>-<destination>/<year>-<month>-<day>/')
+def flights(origin, destination, year, month, day):
     """The flights list page."""
 
-    # Google's QPX Express Airfare API + Google API Client Library
-    # https://developers.google.com/qpx-express/
-    # https://developers.google.com/api-client-library/python/
+    # Google QPX Express API + Google API Client Library
+    #   https://developers.google.com/qpx-express/
+    #   https://developers.google.com/api-client-library/python/
+
+    # Build the QPX Express API service object
     qpx = build('qpxExpress', 'v1', developerKey=QPX_API_KEY)
-    json_request = {"request": {
+
+    # Format the date for our precious QPX
+    date_formatted = "{0}-{1}-{2}".format(year, month, day)
+
+    # Build the JSON request
+    request = {"request": {
                         "passengers": {
                             "adultCount": 1
                         },
@@ -48,18 +68,22 @@ def flights(origin, destination, date):
                             {
                                 "origin": origin,
                                 "destination": destination,
-                                "date": date,
+                                "date": date_formatted,
                                 "maxStops": 0
                             },
                         ]}
                     }
-                    
-    request = qpx.trips().search(body=json_request)
-    response = request.execute()
-    return "<pre>%s</pre>" % json.dumps(response['trips']['tripOption'], sort_keys=True, indent=4)
+
+    # Correctly format the QPX API request - no docs on this anywhere, BTW
+    qpx_request = qpx.trips().search(body=request)
+
+    # Execute the API request
+    qpx_response = qpx_request.execute()
+    flights = qpx_response['trips']
+
+    # Render the flights list page
+    # return render_template('flights.html', flights=flights,
+    #         origin=origin, destination=destination, date=date)
+    return "<pre>%s</pre>" % json.dumps(qpx_response, sort_keys=True, indent=4)
 
 
-@app.errorhandler(404)
-def page_not_found(e):
-    """Return a custom 404 error."""
-    return 'Sorry, nothing at this URL.', 404

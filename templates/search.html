@@ -3,62 +3,83 @@
 {% block title %}QuickHop - Find Flights Fast{% endblock %}
 
 {% block content %}
-<div class="section no-pad-bot">
-  <div class="container">
+<div class="card-panel">
+
+  <h5 class="header center blue-text text-lighten-1">
+    <i class="mdi-device-airplanemode-on"></i> Find Flights Fast
+  </h5><br>
+
+  <form method="POST">
+
+    {{ form.csrf_token }}
+
     <div class="row">
-      <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-
-          <h5 class="header center orange-text text-darken-2">
-          <i class="mdi-device-airplanemode-on"></i> Find Flights Fast
-          </h5><br>
-
-          <form method="POST">
-            {{ form.csrf_token }}
-
-            <div class="row">
-              <div class="input-field col s6">
-                {{ form.origin(class_="validate", placeholder="SFO") }}
-                {{ form.origin.label }}
-                {% if form.origin.errors %}
-                  <ul class="errors">
-                  {% for error in form.origin.errors %}
-                    <li>{{ error }}</li>
-                  {% endfor %}
-                  </ul>
-                {% endif %}
-              </div>
-              <div class="input-field col s6">
-                {{ form.destination(class_="validate", placeholder="JFK") }}
-                {{ form.destination.label }}
-                {% if form.destination.errors %}
-                  <ul class="errors">
-                  {% for error in form.destination.errors %}
-                    <li>{{ error }}</li>
-                  {% endfor %}
-                  </ul>
-                {% endif %}
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s6">
-                {{ form.date(class_="datepicker") }}
-                {{ form.date.label }}
-              </div>
-            </div>
-
-            <div class="center-align">
-              <button class="btn-large waves-effect waves-light orange darken-2" type="submit">
-                <i class="mdi-action-search left"></i>Search
-              </button>
-            </div>
-          </form>
-
-        </div>
+      <div class="input-field col s6">
+        {{ form.origin(class_="validate", placeholder="SFO") }}
+        {{ form.origin.label }}
+        {% if form.origin.errors %}
+          <ul class="errors">
+          {% for error in form.origin.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <div class="input-field col s6">
+        {{ form.destination(class_="validate", placeholder="JFK") }}
+        {{ form.destination.label }}
+        {% if form.destination.errors %}
+          <ul class="errors">
+          {% for error in form.destination.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s4">
+        {{ form.month }}
+        {{ form.month.label }}
+        {% if form.month.errors %}
+          <ul class="errors">
+          {% for error in form.month.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <div class="input-field col s4">
+        {{ form.day }}
+        {{ form.day.label }}
+        {% if form.day.errors %}
+          <ul class="errors">
+          {% for error in form.day.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <div class="input-field col s4">
+        {{ form.year }}
+        {{ form.year.label }}
+        {% if form.year.errors %}
+          <ul class="errors">
+          {% for error in form.year.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     </div>
 
-  </div>
+    <div class="center-align">
+      <button class="btn-large waves-effect waves-light blue lighten-2" type="submit">
+        <i class="mdi-action-search left"></i>Search
+      </button>
+    </div>
+
+  </form>
+
 </div>
 {% endblock %}
