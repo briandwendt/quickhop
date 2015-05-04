@@ -54,7 +54,7 @@ def flights(origin, destination, year, month, day):
     #   https://developers.google.com/api-client-library/python/
 
     # Build the QPX Express API service object
-    qpx = build('qpxExpress', 'v1', developerKey=QPX_API_KEY)
+    #qpx = build('qpxExpress', 'v1', developerKey=QPX_API_KEY)
 
     # Format the date for our precious QPX
     date_formatted = "{0}-{1}-{2}".format(year, month, day)
@@ -75,15 +75,13 @@ def flights(origin, destination, year, month, day):
                     }
 
     # Correctly format the QPX API request - no docs on this anywhere, BTW
-    qpx_request = qpx.trips().search(body=request)
+    #qpx_request = qpx.trips().search(body=request)
 
     # Execute the API request
-    qpx_response = qpx_request.execute()
-    flights = qpx_response['trips']
+    #qpx_response = qpx_request.execute()
 
     # Render the flights list page
-    # return render_template('flights.html', flights=flights,
-    #         origin=origin, destination=destination, date=date)
-    return "<pre>%s</pre>" % json.dumps(qpx_response, sort_keys=True, indent=4)
+    return render_template('flights.html', orig=origin, dest=destination)
+    #return "<pre>%s</pre>" % json.dumps(qpx_response, sort_keys=True, indent=4)
 
 

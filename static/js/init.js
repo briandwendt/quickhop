@@ -5,14 +5,8 @@
 
     $('select').material_select();
 
-    $('.datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 3, // Creates a dropdown to control year
-        closeOnSelect: true,
-        closeOnClear: true,
-        editable: false,
-        format: 'yyyy-mm-dd',
-        formatSubmit: 'yyyy-mm-dd'
+    $('.collapsible').collapsible({
+      accordion : true 
     });
 
   }); // end of document ready

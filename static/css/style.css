@@ -19,9 +19,20 @@
 .container {
   padding: 0;
 }
+.container .row {
+  margin-left: -1.0rem;
+  margin-right: -1.0rem;
+}
 
 nav .brand-logo {
  font-weight: 200;
+}
+
+.card .card-content {
+  padding: 10px 20px;
+}
+.card .card-action {
+  padding: 10px;
 }
 
 #origin, #destination {
