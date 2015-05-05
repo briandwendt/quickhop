@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Thank You! | QuickHop{% endblock %}
+
+{% block content %}
+
+<br><br>
+
+<h1 class="header center orange-text"><i class="mdi-action-favorite-outline"></i> Thank You!</h1>
+
+<div class="row center">
+    <h5 class="header col s12 light">Thanks for supporting QuickHop!</h5>
+    <h5 class="header col s12 light">Your donation is appreciated.</h5>
+</div>
+
+<br><br>
+
+<div class="row center">
+    <a href="{{ url_for('search') }}" class="btn-large waves-effect waves-light orange">Find More Flights</a>
+</div>
+
+<br><br>
+
+{% endblock %}

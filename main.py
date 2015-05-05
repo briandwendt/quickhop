@@ -63,6 +63,16 @@ def search():
     # Render the flights search form
     return render_template('search.html', form=form)
 
+@app.route('/thanks')
+def thanks():
+    """
+
+    Thanks for your donation!
+
+    """
+
+    return render_template('thanks.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
