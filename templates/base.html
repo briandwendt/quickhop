@@ -8,6 +8,10 @@
   <!-- CSS  -->
   <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- Favicons -->
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+  <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/qh-icon-130x130.png') }}" />
 </head>
 
 <body>
@@ -31,21 +35,7 @@
   <div class="container">
     <div class="row">
       <div class="col s12 m8 offset-m2">
-<!--
-      {% with messages = get_flashed_messages() %}
-          {% if messages %}
-          <div class="card deep-orange lighten-3">
-            <div class="card-content black-text">
-              <ul class=flashes>
-              {% for message in messages %}
-                <li>{{ message }}</li>
-              {% endfor %}
-              </ul>
-            </div>
-          </div>
-          {% endif %}
-        {% endwith %}
--->
+
         {% block content %}
         {% endblock %}
 
@@ -59,10 +49,9 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="brown-text">QuickHop Needs You!</h5>
+          <h5 class="brown-text" style="font-size: 1.5rem;">QuickHop Needs You!</h5>
           <p class="brown-text text-lighten-1">
-          QuickHop is a free service, built and maintained by a single person, for the benefit of everyone.
-          Please consider a donation of any amount to help keep this site up and running. Thanks!
+          QuickHop is a free service, built and maintained by one person, for the benefit of everyone. Please consider a donation of any amount to help keep it up and running. Thanks!
           </p>
 
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">

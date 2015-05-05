@@ -1,0 +1,495 @@
+{
+ "request": {
+  "departureAirport": {
+   "requestedCode": "PDX",
+   "airport": {
+    "fs": "PDX",
+    "iata": "PDX",
+    "icao": "KPDX",
+    "faa": "PDX",
+    "name": "Portland International Airport",
+    "street1": "7000 NE Airport Way",
+    "city": "Portland",
+    "cityCode": "PDX",
+    "stateCode": "OR",
+    "postalCode": "97218",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Los_Angeles",
+    "weatherZone": "ORZ006",
+    "localTime": "2015-05-04T15:50:07.421",
+    "utcOffsetHours": -7,
+    "latitude": 45.588995,
+    "longitude": -122.592901,
+    "elevationFeet": 30,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+   }
+  },
+  "arrivalAirport": {
+   "requestedCode": "HNL",
+   "airport": {
+    "fs": "HNL",
+    "iata": "HNL",
+    "icao": "PHNL",
+    "faa": "PHNL",
+    "name": "Honolulu International Airport",
+    "street1": "300 Rodgers Blvd., #12",
+    "street2": "",
+    "city": "Honolulu",
+    "cityCode": "HNL",
+    "stateCode": "HI",
+    "postalCode": "96819",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "Pacific/Honolulu",
+    "weatherZone": "HIZ002",
+    "localTime": "2015-05-04T12:50:07.421",
+    "utcOffsetHours": -10,
+    "latitude": 21.325833,
+    "longitude": -157.921667,
+    "elevationFeet": 13,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+   }
+  },
+  "date": {
+   "year": "2015",
+   "month": "5",
+   "day": "4",
+   "interpreted": "2015-05-04"
+  },
+  "hourOfDay": {
+   "requested": "0",
+   "interpreted": 0
+  },
+  "utc": {
+   "requested": "false",
+   "interpreted": false
+  },
+  "numHours": {
+   "requested": "24",
+   "interpreted": 24
+  },
+  "codeType": {
+   "requested": "IATA",
+   "interpreted": "IATA"
+  },
+  "maxFlights": {
+   "requested": "5",
+   "interpreted": 5
+  },
+  "extendedOptions": {
+   "requested": "useInlinedReferences",
+   "interpreted": "useInlinedReferences"
+  },
+  "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/PDX/HNL/dep/2015/5/4"
+ },
+ "appendix": {},
+ "flightStatuses": [
+  {
+   "flightId": 536728705,
+   "carrier": {
+    "fs": "AS",
+    "iata": "AS",
+    "icao": "ASA",
+    "name": "Alaska Airlines",
+    "phoneNumber": "1-800-252-7522",
+    "active": true
+   },
+   "flightNumber": "833",
+   "departureAirport": {
+    "fs": "PDX",
+    "iata": "PDX",
+    "icao": "KPDX",
+    "faa": "PDX",
+    "name": "Portland International Airport",
+    "street1": "7000 NE Airport Way",
+    "city": "Portland",
+    "cityCode": "PDX",
+    "stateCode": "OR",
+    "postalCode": "97218",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Los_Angeles",
+    "weatherZone": "ORZ006",
+    "localTime": "2015-05-04T15:50:07.464",
+    "utcOffsetHours": -7,
+    "latitude": 45.588995,
+    "longitude": -122.592901,
+    "elevationFeet": 30,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "HNL",
+    "iata": "HNL",
+    "icao": "PHNL",
+    "faa": "PHNL",
+    "name": "Honolulu International Airport",
+    "street1": "300 Rodgers Blvd., #12",
+    "street2": "",
+    "city": "Honolulu",
+    "cityCode": "HNL",
+    "stateCode": "HI",
+    "postalCode": "96819",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "Pacific/Honolulu",
+    "weatherZone": "HIZ002",
+    "localTime": "2015-05-04T12:50:07.464",
+    "utcOffsetHours": -10,
+    "latitude": 21.325833,
+    "longitude": -157.921667,
+    "elevationFeet": 13,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-04T07:05:00.000",
+    "dateUtc": "2015-05-04T14:05:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-04T10:02:00.000",
+    "dateUtc": "2015-05-04T20:02:00.000Z"
+   },
+   "status": "L",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "RFY",
+    "restrictions": ""
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-04T07:05:00.000",
+     "dateUtc": "2015-05-04T14:05:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-04T10:02:00.000",
+     "dateUtc": "2015-05-04T20:02:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-04T07:05:00.000",
+     "dateUtc": "2015-05-04T14:05:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-04T07:03:00.000",
+     "dateUtc": "2015-05-04T14:03:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-04T07:03:00.000",
+     "dateUtc": "2015-05-04T14:03:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-04T07:13:00.000",
+     "dateUtc": "2015-05-04T14:13:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-04T07:13:00.000",
+     "dateUtc": "2015-05-04T14:13:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-04T07:13:00.000",
+     "dateUtc": "2015-05-04T14:13:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-04T10:02:00.000",
+     "dateUtc": "2015-05-04T20:02:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-04T09:43:00.000",
+     "dateUtc": "2015-05-04T19:43:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-04T09:43:00.000",
+     "dateUtc": "2015-05-04T19:43:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-04T09:36:00.000",
+     "dateUtc": "2015-05-04T19:36:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-04T09:38:00.000",
+     "dateUtc": "2015-05-04T19:38:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-04T09:38:00.000",
+     "dateUtc": "2015-05-04T19:38:00.000Z"
+    }
+   },
+   "codeshares": [
+    {
+     "carrier": {
+      "fs": "DL",
+      "iata": "DL",
+      "icao": "DAL",
+      "name": "Delta Air Lines",
+      "phoneNumber": "1-800-221-1212",
+      "active": true
+     },
+     "flightNumber": "9070",
+     "relationship": "L"
+    },
+    {
+     "carrier": {
+      "fs": "KE",
+      "iata": "KE",
+      "icao": "KAL",
+      "name": "Korean Air",
+      "active": true
+     },
+     "flightNumber": "6250",
+     "relationship": "L"
+    },
+    {
+     "carrier": {
+      "fs": "QF",
+      "iata": "QF",
+      "icao": "QFA",
+      "name": "Qantas",
+      "active": true
+     },
+     "flightNumber": "3712",
+     "relationship": "L"
+    }
+   ],
+   "delays": {
+    "arrivalRunwayDelayMinutes": 2
+   },
+   "flightDurations": {
+    "scheduledBlockMinutes": 357,
+    "blockMinutes": 340,
+    "scheduledAirMinutes": 323,
+    "airMinutes": 325,
+    "scheduledTaxiOutMinutes": 8,
+    "taxiOutMinutes": 10,
+    "scheduledTaxiInMinutes": 26,
+    "taxiInMinutes": 5
+   },
+   "airportResources": {
+    "departureGate": "B2",
+    "arrivalTerminal": "M",
+    "arrivalGate": "14"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "73H",
+     "name": "Boeing 737-800 (winglets) Passenger",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": false
+    },
+    "actualEquipment": {
+     "iata": "B738",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    },
+    "tailNumber": "N584AS"
+   }
+  },
+  {
+   "flightId": 536728706,
+   "carrier": {
+    "fs": "HA",
+    "iata": "HA",
+    "icao": "HAL",
+    "name": "Hawaiian Airlines",
+    "active": true
+   },
+   "flightNumber": "25",
+   "departureAirport": {
+    "fs": "PDX",
+    "iata": "PDX",
+    "icao": "KPDX",
+    "faa": "PDX",
+    "name": "Portland International Airport",
+    "street1": "7000 NE Airport Way",
+    "city": "Portland",
+    "cityCode": "PDX",
+    "stateCode": "OR",
+    "postalCode": "97218",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Los_Angeles",
+    "weatherZone": "ORZ006",
+    "localTime": "2015-05-04T15:50:07.465",
+    "utcOffsetHours": -7,
+    "latitude": 45.588995,
+    "longitude": -122.592901,
+    "elevationFeet": 30,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "HNL",
+    "iata": "HNL",
+    "icao": "PHNL",
+    "faa": "PHNL",
+    "name": "Honolulu International Airport",
+    "street1": "300 Rodgers Blvd., #12",
+    "street2": "",
+    "city": "Honolulu",
+    "cityCode": "HNL",
+    "stateCode": "HI",
+    "postalCode": "96819",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "Pacific/Honolulu",
+    "weatherZone": "HIZ002",
+    "localTime": "2015-05-04T12:50:07.465",
+    "utcOffsetHours": -10,
+    "latitude": 21.325833,
+    "longitude": -157.921667,
+    "elevationFeet": 13,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-04T10:15:00.000",
+    "dateUtc": "2015-05-04T17:15:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-04T13:10:00.000",
+    "dateUtc": "2015-05-04T23:10:00.000Z"
+   },
+   "status": "A",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "RFJY",
+    "restrictions": ""
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-04T10:15:00.000",
+     "dateUtc": "2015-05-04T17:15:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-04T13:10:00.000",
+     "dateUtc": "2015-05-04T23:10:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-04T10:15:00.000",
+     "dateUtc": "2015-05-04T17:15:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-04T10:09:00.000",
+     "dateUtc": "2015-05-04T17:09:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-04T10:09:00.000",
+     "dateUtc": "2015-05-04T17:09:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-04T10:28:00.000",
+     "dateUtc": "2015-05-04T17:28:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-04T10:28:00.000",
+     "dateUtc": "2015-05-04T17:28:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-04T10:28:00.000",
+     "dateUtc": "2015-05-04T17:28:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-04T13:10:00.000",
+     "dateUtc": "2015-05-04T23:10:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-04T13:19:00.000",
+     "dateUtc": "2015-05-04T23:19:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-04T12:55:00.000",
+     "dateUtc": "2015-05-04T22:55:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-04T12:56:00.000",
+     "dateUtc": "2015-05-04T22:56:00.000Z"
+    }
+   },
+   "codeshares": [
+    {
+     "carrier": {
+      "fs": "CI",
+      "iata": "CI",
+      "icao": "CAL",
+      "name": "China Airlines",
+      "active": true
+     },
+     "flightNumber": "9205",
+     "relationship": "L"
+    },
+    {
+     "carrier": {
+      "fs": "KE",
+      "iata": "KE",
+      "icao": "KAL",
+      "name": "Korean Air",
+      "active": true
+     },
+     "flightNumber": "7882",
+     "relationship": "L"
+    }
+   ],
+   "delays": {
+    "arrivalGateDelayMinutes": 9,
+    "arrivalRunwayDelayMinutes": 1
+   },
+   "flightDurations": {
+    "scheduledBlockMinutes": 355,
+    "scheduledAirMinutes": 327,
+    "scheduledTaxiOutMinutes": 13,
+    "taxiOutMinutes": 19,
+    "scheduledTaxiInMinutes": 15
+   },
+   "airportResources": {
+    "departureGate": "D10",
+    "arrivalTerminal": "M",
+    "arrivalGate": "28",
+    "baggage": "-"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "332",
+     "name": "Airbus Industrie A330-200",
+     "turboProp": false,
+     "jet": true,
+     "widebody": true,
+     "regional": false
+    },
+    "actualEquipment": {
+     "iata": "A332",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    },
+    "tailNumber": "N393HA"
+   }
+  }
+ ]
+}

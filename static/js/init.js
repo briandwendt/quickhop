@@ -6,7 +6,7 @@
     $('select').material_select();
 
     $('.collapsible').collapsible({
-      accordion : true 
+      accordion : false 
     });
 
   }); // end of document ready

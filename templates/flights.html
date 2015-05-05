@@ -1,23 +1,78 @@
 {% extends "base.html" %}
 
-{% block title %}{{ orig }} to {{ dest }} | QuickHop{% endblock %}
+{% block title %}
+  {{ flights.request.departureAirport.airport.iata }} to
+  {{ flights.request.arrivalAirport.airport.iata }} | QuickHop
+{% endblock %}
 
 {% block content %}
 
-<h4 class="center-align">{{ orig }} <small>to</small> {{ dest }}</h4>
+<h4 class="center-align">
+  {{ flights.request.departureAirport.airport.iata }} to
+  {{ flights.request.arrivalAirport.airport.iata }}
+</h4>
+
+<p class="center-align">
+  {{ flights.request.departureAirport.airport.name }}<br>
+  {{ flights.request.arrivalAirport.airport.name }}<br>
+  {{ flights.request.date.interpreted | as_date }}
+</p>
 
 <div class="row">
-<div class="col s12">
+    <div class="col s12">
 
-  <div class="card">
-    <div class="card-content black-text">
-    <span class="card-title black-text">9:39am</span>
-    <p>US 4356</p>
+      <ul class="collapsible popout" data-collapsible="accordion">
+
+        {% for flight in flights.flightStatuses %}
+
+        <li>
+          <div class="collapsible-header active">
+            <i class="mdi-action-alarm-on scheduled"></i>
+            <span class="flight dep_time">
+              {{ flight.operationalTimes.publishedDeparture.dateLocal | as_time }}
+              <span style="font-size: 50%;">
+                {{ flight.operationalTimes.publishedDeparture.dateLocal | am_pm }}
+              </span>
+            </span>
+            <span class="flight number">
+              {{ flight.carrier.iata }} {{ flight.flightNumber }}
+            </span>
+          </div>
+          <div class="collapsible-body">
+            <ul style="padding: 10px;">
+            {{ flight.carrier.name }} {{ flight.flightNumber }}
+              <li>
+                Arrive {{ flights.request.arrivalAirport.airport.iata }}:
+                {{ flight.operationalTimes.publishedArrival.dateLocal | as_time }}
+                {{ flight.operationalTimes.publishedArrival.dateLocal | am_pm }}
+              </li>
+              <li>
+                Status Code: {{ flight.status }}
+              </li>
+              <li>
+                Departure Terminal: {{ flight.airportResources.departureTerminal }}
+              </li>
+              <li>
+                Departure Gate: {{ flight.airportResources.departureGate }}
+              </li>
+              <li>
+                Arrival Terminal: {{ flight.airportResources.arrivalTerminal }}
+              </li>
+              <li>
+                Arrival Gate: {{ flight.airportResources.arrivalGate }}
+              </li>
+              <li>
+                Aircraft: {{ flight.flightEquipment.scheduledEquipment.iata }}
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        {% endfor %}
+
+      </ul>
+
     </div>
-  </div>
-
-
-</div>
 </div>
 
 {% endblock %}

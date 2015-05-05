@@ -1,0 +1,33 @@
+{
+ "request": {
+  "departureAirport": {
+   "requestedCode": "XIX",
+   "error": "BAD_AIRPORT_CODE"
+  },
+  "arrivalAirport": {},
+  "date": {
+   "year": "2015",
+   "month": "5",
+   "day": "4",
+   "interpreted": "2015-05-04"
+  },
+  "hourOfDay": {},
+  "utc": {},
+  "numHours": {},
+  "codeType": {
+   "requested": "IATA",
+   "interpreted": "IATA"
+  },
+  "maxFlights": {},
+  "extendedOptions": {},
+  "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/XIX/HNL/dep/2015/5/4"
+ },
+ "appendix": {},
+ "error": {
+  "httpStatusCode": 400,
+  "errorCode": "BAD_AIRPORT_CODE",
+  "errorId": "0ff782f7-74ac-427d-b587-c8bdc702d47f",
+  "errorMessage": "The given airport code was invalid. Invalid airport code: 'XIX'"
+ },
+ "flightStatuses": []
+}

@@ -1,3 +1,5 @@
+@import url('//fonts.googleapis.com/css?family=Neucha:300,400');
+
 @media only screen and (min-width: 0) {
     html {
       font-size: 15px;
@@ -15,7 +17,6 @@
     }
 }
 
-
 .container {
   padding: 0;
 }
@@ -25,15 +26,91 @@
 }
 
 nav .brand-logo {
- font-weight: 200;
+  font-family: 'Neucha', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  font-size: 2.3rem;
 }
 
-.card .card-content {
-  padding: 10px 20px;
+h4.header {
+  font-size: 2.1rem;
+  letter-spacing: -0.8px;
+  line-height: 0;
 }
-.card .card-action {
-  padding: 10px;
+
+ul.flashes li {
+  color: red;
+  font-size: 0.85rem;
 }
+
+.collapsible-header {
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.collapsible-header i {
+  width: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  float: right;
+  margin-left: 0.2rem;
+}
+
+.input-field label {
+  top: -0.8rem;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+.input-field label.active {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+.input-field label,
+.input-field label.active,
+.select-wrapper + label {
+  font-size: 0.85rem;
+}
+
+.flight {
+  display: inline-block;
+}
+.flight.dep_time {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #42a5f5;
+  margin-right: 0.6rem;
+  text-align: right;
+  width: 100px;
+  overflow: ;
+}
+@media only screen and (min-width: 992px) {
+    .flight.dep_time {
+      font-weight: 300;
+    }
+}
+.flight.number {
+  color: #424242;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  width: 50%;
+}
+.canceled {
+  color: red;
+}
+.delayed {
+  color: orange;
+}
+.scheduled {
+  color: green;
+}
+
 
 #origin, #destination {
  text-transform: uppercase;
@@ -52,7 +129,7 @@ ul.errors li {
 /* select field dropdowns */
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 1.0rem;
-  color: #29b6f6;
+  color: #42a5f5;
 }
 
 /* label color */
@@ -61,12 +138,12 @@ ul.errors li {
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
- color: #29b6f6;
+ color: #42a5f5;
 }
 /* label underline focus color */
 .input-field input[type=text]:focus {
- border-bottom: 1px solid #29b6f6;
- box-shadow: 0 1px 0 0 #29b6f6;
+ border-bottom: 1px solid #42a5f5;
+ box-shadow: 0 1px 0 0 #42a5f5;
 }
 /* valid color */
 .input-field input[type=text].valid {
