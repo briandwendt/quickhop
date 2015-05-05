@@ -6,11 +6,11 @@ from datetime import date, time, datetime
 class FindFlights(Form):
 
     origin = StringField('Departure Airport', validators=[
-        Length(min=3, max=3, message=(u'Enter a 3-letter IATA code'))
+        Length(min=3, max=3, message=(u'3-letter IATA code'))
     ])
 
     destination = StringField('Arrival Airport', validators=[
-        Length(min=3, max=3, message=(u'Enter a 3-letter IATA code'))
+        Length(min=3, max=3, message=(u'3-letter IATA code'))
     ])
 
     year = SelectField('Year', default=str(datetime.now().year),

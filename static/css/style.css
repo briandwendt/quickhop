@@ -96,7 +96,7 @@ ul.flashes li {
   font-weight: 400;
   color: #42a5f5;
   text-align: right;
-  width: 100px;
+  width: 95px;
 }
 @media only screen and (min-width: 992px) {
     .flight.dep_time {
@@ -118,6 +118,12 @@ ul.flashes li {
 }
 .scheduled {
   color: green;
+}
+.landed {
+  color: #aaa;
+}
+.enroute {
+  color: #0277bd;
 }
 
 

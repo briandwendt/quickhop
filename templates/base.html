@@ -20,11 +20,15 @@
     <nav class="blue lighten-1" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="{{ url_for('search') }}" class="brand-logo">QuickHop</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Help</a></li>
+          <li><a href="{{ url_for('search') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('faq') }}">FAQ</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Help</a></li>
+          <li><a href="{{ url_for('search') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('faq') }}">FAQ</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-file-cloud"></i></a>
       </div>

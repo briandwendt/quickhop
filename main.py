@@ -65,22 +65,18 @@ def search():
 
 @app.route('/thanks')
 def thanks():
-    """
-
-    Thanks for your donation!
-
-    """
-
     return render_template('thanks.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
-    """
-
-    Custom 404 message.
-
-    """
     return 'Sorry, nothing at this URL.', 404
 
 

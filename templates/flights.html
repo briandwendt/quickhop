@@ -7,15 +7,28 @@
 
 {% block content %}
 
-<h4 class="center-align">
-  {{ flights.request.departureAirport.airport.iata }} to
+<h5 class="center-align blue-text text-lighten-1" style="font-weight: 300;">
+  {{ flights.request.departureAirport.airport.iata }}
+  <span style="font-size: 75%;">&mdash;</span>
   {{ flights.request.arrivalAirport.airport.iata }}
-</h4>
+</h5>
 
-<p class="center-align">
-  {{ flights.request.departureAirport.airport.name }}<br>
-  {{ flights.request.arrivalAirport.airport.name }}<br>
-  {{ flights.request.date.interpreted | as_date }}
+<h6 class="center-align">{{ flights.request.date.interpreted | as_date }}</h6>
+
+<p class="center-align" style="font-size: 0.8rem;">
+  {{ flights.request.departureAirport.airport.city }},
+  {% if 'stateCode' in flights.request.departureAirport.airport %}
+    {{ flights.request.departureAirport.airport.stateCode }}
+  {% elif 'countryName' in flights.request.departureAirport.airport %}
+    {{ flights.request.departureAirport.airport.countryName }}
+  {% endif %}
+  &rarr;
+  {{ flights.request.arrivalAirport.airport.city }},
+  {% if 'stateCode' in flights.request.arrivalAirport.airport %}
+    {{ flights.request.arrivalAirport.airport.stateCode }}
+  {% elif 'countryName' in flights.request.arrivalAirport.airport %}
+    {{ flights.request.arrivalAirport.airport.countryName }}
+  {% endif %}
 </p>
 
 <div class="row">
@@ -27,12 +40,33 @@
 
         <li>
           <div class="collapsible-header active">
-            <i class="mdi-action-alarm-on scheduled"></i>
+
+            {% if 'status' in flight %}
+              {% if flight.status == 'S' %}
+                <!-- Status: Scheduled -->
+                <i class="mdi-action-alarm scheduled"></i>
+              {% elif flight.status == 'C' %}
+                <!-- Status: Canceled -->
+                <i class="mdi-action-highlight-remove canceled"></i>
+              {% elif flight.status == 'L' %}
+                <!-- Status: Landed -->
+                <i class="mdi-action-done landed"></i>
+              {% elif flight.status == 'A' %}
+                <!-- Status: Active/Enroute -->
+                <i class="mdi-device-airplanemode-on enroute"></i>
+              {% elif flight.status == 'D' %}
+                <!-- Status: Diverted -->
+                <i class="mdi-communication-call-missed enroute"></i>
+              {% endif %}
+            {% endif %}
+
+
             <span class="flight dep_time">
-              {{ flight.operationalTimes.publishedDeparture.dateLocal | as_time }}
-              <span style="font-size: 50%;">
-                {{ flight.operationalTimes.publishedDeparture.dateLocal | am_pm }}
-              </span>
+              {% if 'publishedDeparture' in flight.operationalTimes %}
+                {{ flight.operationalTimes.publishedDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.publishedDeparture.dateLocal | am_pm }}</span>
+              {% elif 'flightPlanPlannedDeparture' in flight.operationalTimes %}
+                {{ flight.operationalTimes.flightPlanPlannedDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.flightPlanPlannedDeparture.dateLocal | am_pm }}</span>
+              {% endif %}
             </span>
             <span class="flight number">
               {{ flight.carrier.iata }} {{ flight.flightNumber }}
@@ -42,13 +76,20 @@
             <ul style="padding: 10px;">
             {{ flight.carrier.name }} {{ flight.flightNumber }}
               <li>
-                Arrive {{ flights.request.arrivalAirport.airport.iata }}:
-                {{ flight.operationalTimes.publishedArrival.dateLocal | as_time }}
-                {{ flight.operationalTimes.publishedArrival.dateLocal | am_pm }}
+                Arrive:
+                {% if 'publishedArrival' in flight.operationalTimes %}
+                  {{ flight.operationalTimes.publishedArrival.dateLocal | as_time }}
+                  {{ flight.operationalTimes.publishedArrival.dateLocal | am_pm }}
+                {% elif 'flightPlanPlannedArrival' in flight.operationalTimes %}
+                  {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | as_time }}
+                  {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | am_pm }}
+                {% endif %}
               </li>
               <li>
                 Status Code: {{ flight.status }}
               </li>
+
+              {% if 'airportResources' in flight %}
               <li>
                 Departure Terminal: {{ flight.airportResources.departureTerminal }}
               </li>
@@ -61,9 +102,18 @@
               <li>
                 Arrival Gate: {{ flight.airportResources.arrivalGate }}
               </li>
+              {% endif %}
+
               <li>
-                Aircraft: {{ flight.flightEquipment.scheduledEquipment.iata }}
+                {% if 'flightEquipment' in flight %}
+                  {% if 'scheduledEquipment' in flight.flightEquipment %}
+                    Aircraft: {{ flight.flightEquipment.scheduledEquipment.iata }}
+                  {% elif 'actualEquipment' in flight.flightEquipment %}
+                    Aircraft: {{ flight.flightEquipment.actualEquipment.iata }}
+                  {% endif %}
+                {% endif %}
               </li>
+
             </ul>
           </div>
         </li>
