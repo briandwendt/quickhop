@@ -7,3 +7,4 @@ dist
 *.egg
 *.egg-info
 secret_keys.py
+lib/*.pyc
