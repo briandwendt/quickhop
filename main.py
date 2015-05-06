@@ -63,17 +63,21 @@ def search():
     # Render the flights search form
     return render_template('search.html', form=form)
 
-@app.route('/thanks')
-def thanks():
-    return render_template('thanks.html')
 
 @app.route('/about')
 def about():
     return render_template('about.html')
 
+
 @app.route('/faq')
 def faq():
     return render_template('faq.html')
+
+
+@app.route('/thanks')
+def thanks():
+    return render_template('thanks.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -82,12 +86,7 @@ def page_not_found(e):
 
 @app.route('/flights/<origin>/<destination>/<year>/<month>/<day>/')
 def flights(origin, destination, year, month, day):
-    """
-
-    The flights list page.
-
-    """
-
+    
     # FlightStats API: "Flight Status by Route"
     fs_url = 'https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/'
     fs_url = fs_url + '{orig}/{dest}/dep/{year}/{month}/{day}'\

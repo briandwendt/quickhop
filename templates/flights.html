@@ -36,6 +36,7 @@
       <ul class="collapsible popout" data-collapsible="accordion">
 
         {% for flight in flights.flightStatuses %}
+        {% if not 'FX' in flight.carrier.iata %}
 
         <li>
           <div class="collapsible-header active">
@@ -62,6 +63,8 @@
             <span class="flight dep_time">
               {% if 'publishedDeparture' in flight.operationalTimes %}
                 {{ flight.operationalTimes.publishedDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.publishedDeparture.dateLocal | am_pm }}</span>
+              {% elif 'scheduledGateDeparture' in flight.operationalTimes %}
+                {{ flight.operationalTimes.scheduledGateDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.scheduledGateDeparture.dateLocal | am_pm }}</span>
               {% elif 'flightPlanPlannedDeparture' in flight.operationalTimes %}
                 {{ flight.operationalTimes.flightPlanPlannedDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.flightPlanPlannedDeparture.dateLocal | am_pm }}</span>
               {% endif %}
@@ -73,19 +76,22 @@
 <!--
 
 
-          Hidden flights data===================================
+
+========== Collapsible flights data card ===================================
+
 
 
 -->
           <div class="collapsible-body">
 
-            <h5 class="center" style="font-size: 1.1rem; font-weight: 500;">
-              {{ flight.carrier.name }} {{ flight.flightNumber }}
-            </h5>
+            
 
             <div class="row">
               <!-- Left Block -->
               <div class="col s5" style="padding-left: 40px;">
+              <h5 class="" style="font-size: 1.2rem; font-weight: 500;">
+                {{ flight.carrier.name | replace("Airlines", "") }} {{ flight.flightNumber }}
+              </h5>
                 {% if 'airportResources' in flight %}
                   <span>Gate</span><br>
                   <h3 style="margin: 0;">{{ flight.airportResources.departureGate|default('N/A') }}</h3>
@@ -93,10 +99,20 @@
                     <span>Terminal {{ flight.airportResources.departureTerminal }}</span>
                   {% endif %}
                 {% endif %}
+
+                <p style="padding: 10px 0 1.4rem 0; font-size: 0.8rem;">
+                  {% if 'flightEquipment' in flight %}
+                    {% if 'scheduledEquipment' in flight.flightEquipment %}
+                      {{ flight.flightEquipment.scheduledEquipment.name|replace("(winglets)", "")|replace("Passenger", "")|replace("and Challenger 890", "")|replace("and Challenger 870", "")|replace("Industrie", "")|replace("Regional Jet", "RJ")|replace("RJ135/RJ140/RJ145", "135/145")|replace("Dash 8/8Q", "")|replace("Dash 8/8Q", "")|replace("(Bombardier)", "") }}
+                    {% elif 'actualEquipment' in flight.flightEquipment %}
+                      Equip: {{ flight.flightEquipment.actualEquipment.iata }}
+                    {% endif %}
+                  {% endif %}
+                </p>
               </div>
 
               <!-- Right Block -->
-              <div class="col s7">
+              <div class="col s7" style="padding: 12px 0;">
                 {% if 'status' in flight %}
                   {% if flight.status == 'S' %}
                     <!-- Status: Scheduled -->
@@ -131,42 +147,51 @@
                 {% endif %}
 
                 {% if 'airportResources' in flight %}
-                  <ul style="padding: 8px 0 0 10px;">
+                  <ul style="padding: 8px 0 0 8px;">
+                    {% if 'actualGateDeparture' in flight.operationalTimes %}
+                      <li>
+                        Departed: 
+                        {{ flight.operationalTimes.actualGateDeparture.dateLocal | as_time }}
+                        {{ flight.operationalTimes.actualGateDeparture.dateLocal | am_pm }}
+                      </li>
+                    {% endif %}
+                    {% if 'flightDurations' in flight %}
+                      <li>Duration: {{ flight.flightDurations.scheduledBlockMinutes }} min</li>
+                    {% endif %}
                     <li>
                       {% if 'publishedArrival' in flight.operationalTimes %}
-                        Arrive: 
+                        Arrives: 
                         {{ flight.operationalTimes.publishedArrival.dateLocal | as_time }}
                         {{ flight.operationalTimes.publishedArrival.dateLocal | am_pm }}
+                      {% elif 'scheduledGateArrival' in flight.operationalTimes %}
+                        Arrives: 
+                        {{ flight.operationalTimes.scheduledGateArrival.dateLocal | as_time }}
+                        {{ flight.operationalTimes.scheduledGateArrival.dateLocal | am_pm }}
                       {% elif 'flightPlanPlannedArrival' in flight.operationalTimes %}
-                        Arrive: 
+                        Arrives: 
                         {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | as_time }}
                         {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | am_pm }}
                       {% endif %}
                     </li>
+                    {% if flight.airportResources.arrivalGate %}
                     <li>
-                      Arrival Terminal: {{ flight.airportResources.arrivalTerminal }}
+                      Gate: {{ flight.airportResources.arrivalGate }}
                     </li>
+                    {% endif %}
+                    {% if flight.airportResources.arrivalTerminal %}
                     <li>
-                      Arrival Gate: {{ flight.airportResources.arrivalGate }}
+                      Terminal: {{ flight.airportResources.arrivalTerminal }}
                     </li>
+                    {% endif %}
                   </ul>
                 {% endif %}
               </div>
             </div>       
 
-            <p class="center" style="padding: 0 0 1.4rem 0;">
-              {% if 'flightEquipment' in flight %}
-                {% if 'scheduledEquipment' in flight.flightEquipment %}
-                  {{ flight.flightEquipment.scheduledEquipment.name|replace("(winglets)", "")|replace("Passenger", "")|replace("(Bombardier)", "")|replace("and Challenger 890", "")|replace("and Challenger 870", "") }}
-                {% elif 'actualEquipment' in flight.flightEquipment %}
-                  Equipment: {{ flight.flightEquipment.actualEquipment.iata }}
-                {% endif %}
-              {% endif %}
-            </p>
-
           </div>
         </li>
 
+        {% endif %}
         {% endfor %}
 
       </ul>
