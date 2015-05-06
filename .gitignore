@@ -3,8 +3,12 @@
 *.pyo
 env
 env*
+venv
+venv*
 dist
 *.egg
 *.egg-info
+*.dist-info
+
+# Keep the keys out of version control
 secret_keys.py
-lib/*.pyc

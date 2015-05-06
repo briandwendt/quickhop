@@ -1,9 +1,14 @@
-# This requirements file lists all third-party dependencies for this project.
+# This requirements file lists all third-party dependencies.
 #
-# Run 'pip install -r requirements.txt -t lib/' to install these dependencies
-# in `lib/` subdirectory.
+# To install these dependencies for Google App Engine, run:
 #
-# Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
+#
+#    $ pip install -r requirements.txt -t lib
+#
+#
+# This will create and populate the `lib` subdirectory.
+# The `lib` directory is added to `sys.path` by `appengine_config.py`.
+#
 
 Flask==0.10
 Flask-WTF==0.11
