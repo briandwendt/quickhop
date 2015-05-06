@@ -3,7 +3,7 @@
 # To install these dependencies for Google App Engine, run:
 #
 #
-#    $ pip install -r requirements.txt -t lib
+#    $ pip install -r requirements.txt -t lib/
 #
 #
 # This will create and populate the `lib` subdirectory.

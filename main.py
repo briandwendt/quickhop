@@ -11,7 +11,7 @@ import dateutil.parser
 # Create a new Flask app
 app = Flask(__name__)
 
-# Date & time filters
+# Date & time filters for Jinja
 @app.template_filter()
 def as_time(value, format='%l:%M'):
     """ Converts ISO-8601 format datetime to HH:MM. """
@@ -37,8 +37,6 @@ app.config['CSRF_ENABLED'] = True
 app.config['SECRET_KEY'] = CSRF_SECRET_KEY
 
 # Define the routes
-# TODO: move these to views.py ?
-# TODO: move business logic to models.py ?
 
 @app.route('/', methods=('GET', 'POST'))
 def search():
@@ -47,7 +45,6 @@ def search():
     The main flights search page.
 
     """
-
     # Forms are in forms.py
     form = FindFlights()
 
@@ -106,7 +103,7 @@ def flights(origin, destination, year, month, day):
     flights = r.json()
 
     # If there are errors, return to the search form
-    if "error" in flights:
+    if 'error' in flights:
         flash(flights['error']['errorMessage'])
         return redirect(url_for('search'))
 
