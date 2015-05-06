@@ -85,7 +85,7 @@
 
             <div class="row">
               <!-- Left Block -->
-              <div class="col s6" style="padding-left: 40px;">
+              <div class="col s5" style="padding-left: 40px;">
                 {% if 'airportResources' in flight %}
                   <span>Gate</span><br>
                   <h3 style="margin: 0;">{{ flight.airportResources.departureGate|default('N/A') }}</h3>
@@ -96,7 +96,7 @@
               </div>
 
               <!-- Right Block -->
-              <div class="col s6">
+              <div class="col s7">
                 {% if 'status' in flight %}
                   {% if flight.status == 'S' %}
                     <!-- Status: Scheduled -->
@@ -131,7 +131,7 @@
                 {% endif %}
 
                 {% if 'airportResources' in flight %}
-                  <ul style="padding: 8px 0 0 14px;">
+                  <ul style="padding: 8px 0 0 10px;">
                     <li>
                       {% if 'publishedArrival' in flight.operationalTimes %}
                         Arrive: 
@@ -144,7 +144,7 @@
                       {% endif %}
                     </li>
                     <li>
-                      Arrival Terminal: {{ flight.airportResources.arrivalTerminal }}
+                      Arrival Term: {{ flight.airportResources.arrivalTerminal }}
                     </li>
                     <li>
                       Arrival Gate: {{ flight.airportResources.arrivalGate }}
@@ -157,7 +157,7 @@
             <p class="center" style="padding: 0 0 1.4rem 0;">
               {% if 'flightEquipment' in flight %}
                 {% if 'scheduledEquipment' in flight.flightEquipment %}
-                  {{ flight.flightEquipment.scheduledEquipment.name }}
+                  {{ flight.flightEquipment.scheduledEquipment.name|replace("(winglets)", "")|replace("Passenger", "")|replace("(Bombardier)", "")|replace("and Challenger 890", "")|replace("and Challenger 870", "") }}
                 {% elif 'actualEquipment' in flight.flightEquipment %}
                   Equipment: {{ flight.flightEquipment.actualEquipment.iata }}
                 {% endif %}
