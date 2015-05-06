@@ -36,18 +36,23 @@
       <ul class="collapsible popout" data-collapsible="accordion">
 
         {% for flight in flights.flightStatuses %}
-        {% if not 'FX' in flight.carrier.iata %}
+        {% if not 'FX' in flight.carrier.iata and not 'C2' in flight.carrier.iata and not '1I' in flight.carrier.iata %}
 
         <li>
           <div class="collapsible-header active">
 
             {% if 'status' in flight %}
               {% if flight.status == 'S' %}
-                <!-- Status: Scheduled -->
-                <i class="mdi-action-alarm scheduled"></i>
+                {% if 'delays' in flight %}
+                  <!-- Status: Delayed -->
+                  <i class="mdi-device-add-alarm delayed"></i>
+                {% else %}
+                  <!-- Status: Scheduled -->
+                  <i class="mdi-action-alarm scheduled"></i>
+                {% endif %}
               {% elif flight.status == 'C' %}
                 <!-- Status: Canceled -->
-                <i class="mdi-action-highlight-remove canceled"></i>
+                <i class="mdi-device-airplanemode-off canceled"></i>
               {% elif flight.status == 'L' %}
                 <!-- Status: Landed -->
                 <i class="mdi-action-done landed"></i>
@@ -70,28 +75,35 @@
               {% endif %}
             </span>
             <span class="flight number">
-              {{ flight.carrier.iata }} {{ flight.flightNumber }}                           
+              {% if 'codeshares' in flight %}
+                {% for codeshare in flight.codeshares %}
+                  {% if 'X' in codeshare.relationship or 'S' in codeshare.relationship %}
+                    {{ codeshare.carrier.iata }} /
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              {{ flight.carrier.iata }}
+              {{ flight.flightNumber }}                           
             </span>
           </div>
 <!--
 
 
 
-========== Collapsible flights data card ===================================
+========== Collapsible Flight Data ===================================
 
 
 
 -->
           <div class="collapsible-body">
 
-            
+            <h5 class="center" style="font-size: 1.2rem; font-weight: 500;">
+              {{ flight.carrier.name }} {{ flight.flightNumber }}
+            </h5>
 
             <div class="row">
               <!-- Left Block -->
               <div class="col s5" style="padding-left: 40px;">
-              <h5 class="" style="font-size: 1.2rem; font-weight: 500;">
-                {{ flight.carrier.name | replace("Airlines", "") }} {{ flight.flightNumber }}
-              </h5>
                 {% if 'airportResources' in flight %}
                   <span>Gate</span><br>
                   <h3 style="margin: 0;">{{ flight.airportResources.departureGate|default('N/A') }}</h3>
@@ -112,16 +124,25 @@
               </div>
 
               <!-- Right Block -->
-              <div class="col s7" style="padding: 12px 0;">
+              <div class="col s7">
                 {% if 'status' in flight %}
                   {% if flight.status == 'S' %}
-                    <!-- Status: Scheduled -->
-                    <i class="mdi-action-alarm scheduled"></i>&nbsp;
-                    <span class="scheduled">Scheduled</span>
+                    {% if 'delays' in flight %}
+                      {% if flight.delays.departureGateDelayMinutes %}
+                        <i class="mdi-device-add-alarm delayed"></i>&nbsp;
+                        <span class="delayed">Delayed
+                          {{ flight.delays.departureGateDelayMinutes }} min
+                        </span>
+                      {% endif %}
+                    {% else %}
+                      <!-- Status: Scheduled -->
+                      <i class="mdi-action-alarm scheduled"></i>&nbsp;
+                      <span class="scheduled">On Time</span>
+                    {% endif %}
 
                   {% elif flight.status == 'C' %}
                     <!-- Status: Canceled -->
-                    <i class="mdi-action-highlight-remove canceled"></i>&nbsp;
+                    <i class="mdi-device-airplanemode-off canceled"></i>&nbsp;
                     <span class="canceled">Canceled</span> 
 
                   {% elif flight.status == 'L' %}
@@ -132,11 +153,27 @@
                       at {{ flight.operationalTimes.actualGateArrival.dateLocal | as_time }}
                       {{ flight.operationalTimes.actualGateArrival.dateLocal | am_pm }}
                     {% endif %}</span>
+                    {% if 'delays' in flight %}
+                      {% if flight.delays.departureGateDelayMinutes %}
+                        <br><i class="mdi-device-add-alarm delayed"></i>&nbsp;
+                        <span class="delayed">Delayed
+                          {{ flight.delays.departureGateDelayMinutes }} min
+                        </span>
+                      {% endif %}
+                    {% endif %}
 
                   {% elif flight.status == 'A' %}
                     <!-- Status: Active/Enroute -->
                     <i class="mdi-device-airplanemode-on enroute"></i>&nbsp;
-                    <span class="enroute">Enroute &rarr;</span> 
+                    <span class="enroute">Enroute &rarr;</span>
+                    {% if 'delays' in flight %}
+                      {% if flight.delays.departureGateDelayMinutes %}
+                        <br><i class="mdi-device-add-alarm delayed"></i>&nbsp;
+                        <span class="delayed">Delayed
+                          {{ flight.delays.departureGateDelayMinutes }} min
+                        </span>
+                      {% endif %}
+                    {% endif %}
 
                   {% elif flight.status == 'D' %}
                     <!-- Status: Diverted -->
@@ -146,33 +183,37 @@
                   {% endif %}
                 {% endif %}
 
+                <ul style="padding: 8px 0 0 8px;">
                 {% if 'airportResources' in flight %}
-                  <ul style="padding: 8px 0 0 8px;">
-                    {% if 'actualGateDeparture' in flight.operationalTimes %}
-                      <li>
-                        Departed: 
-                        {{ flight.operationalTimes.actualGateDeparture.dateLocal | as_time }}
-                        {{ flight.operationalTimes.actualGateDeparture.dateLocal | am_pm }}
-                      </li>
-                    {% endif %}
-                    {% if 'flightDurations' in flight %}
-                      <li>Duration: {{ flight.flightDurations.scheduledBlockMinutes }} min</li>
-                    {% endif %}
+          
+                  {% if 'actualGateDeparture' in flight.operationalTimes %}
                     <li>
-                      {% if 'publishedArrival' in flight.operationalTimes %}
-                        Arrives: 
-                        {{ flight.operationalTimes.publishedArrival.dateLocal | as_time }}
-                        {{ flight.operationalTimes.publishedArrival.dateLocal | am_pm }}
-                      {% elif 'scheduledGateArrival' in flight.operationalTimes %}
-                        Arrives: 
-                        {{ flight.operationalTimes.scheduledGateArrival.dateLocal | as_time }}
-                        {{ flight.operationalTimes.scheduledGateArrival.dateLocal | am_pm }}
-                      {% elif 'flightPlanPlannedArrival' in flight.operationalTimes %}
-                        Arrives: 
-                        {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | as_time }}
-                        {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | am_pm }}
-                      {% endif %}
+                      Departed: 
+                      {{ flight.operationalTimes.actualGateDeparture.dateLocal | as_time }}
+                      {{ flight.operationalTimes.actualGateDeparture.dateLocal | am_pm }}
                     </li>
+                  {% endif %}
+
+                  {% if 'flightDurations' in flight %}
+                    <li>Duration: {{ flight.flightDurations.scheduledBlockMinutes }} min</li>
+                  {% endif %}
+
+                  <li>
+                    {% if 'publishedArrival' in flight.operationalTimes %}
+                      Arrives: 
+                      {{ flight.operationalTimes.publishedArrival.dateLocal | as_time }}
+                      {{ flight.operationalTimes.publishedArrival.dateLocal | am_pm }}
+                    {% elif 'scheduledGateArrival' in flight.operationalTimes %}
+                      Arrives: 
+                      {{ flight.operationalTimes.scheduledGateArrival.dateLocal | as_time }}
+                      {{ flight.operationalTimes.scheduledGateArrival.dateLocal | am_pm }}
+                    {% elif 'flightPlanPlannedArrival' in flight.operationalTimes %}
+                      Arrives: 
+                      {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | as_time }}
+                      {{ flight.operationalTimes.flightPlanPlannedArrival.dateLocal | am_pm }}
+                    {% endif %}
+                  </li>
+
                     {% if flight.airportResources.arrivalGate %}
                     <li>
                       Gate: {{ flight.airportResources.arrivalGate }}
@@ -183,12 +224,24 @@
                       Terminal: {{ flight.airportResources.arrivalTerminal }}
                     </li>
                     {% endif %}
-                  </ul>
+        
                 {% endif %}
-              </div>
-            </div>       
+                </ul>
+              </div> <!-- end Right Block -->
+            </div> <!-- end row -->
 
-          </div>
+            {% if 'codeshares' in flight %}
+              {% for codeshare in flight.codeshares %}
+                {% if 'X' in codeshare.relationship or 'S' in codeshare.relationship %}
+                  <p class="center" style="font-size: 0.7rem; padding: 0 0 20px 0;">
+                    * Operated by {{ flight.carrier.name }} for
+                    {{ codeshare.carrier.name }}
+                  </p>
+                {% endif %}
+              {% endfor %}
+            {% endif %} 
+
+          </div> <!-- end collapsible body -->
         </li>
 
         {% endif %}

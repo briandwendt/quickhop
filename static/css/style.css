@@ -114,7 +114,7 @@ ul.flashes li {
   color: red;
 }
 .delayed {
-  color: orange;
+  color: #f57c00;
 }
 .scheduled {
   color: green;
