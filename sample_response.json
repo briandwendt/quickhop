@@ -1,69 +1,68 @@
 {
  "request": {
   "departureAirport": {
-   "requestedCode": "PDX",
+   "requestedCode": "DAL",
    "airport": {
-    "fs": "PDX",
-    "iata": "PDX",
-    "icao": "KPDX",
-    "faa": "PDX",
-    "name": "Portland International Airport",
-    "street1": "7000 NE Airport Way",
-    "city": "Portland",
-    "cityCode": "PDX",
-    "stateCode": "OR",
-    "postalCode": "97218",
+    "fs": "DAL",
+    "iata": "DAL",
+    "icao": "KDAL",
+    "faa": "DAL",
+    "name": "Dallas Love Field",
+    "street1": "8008 Cedar Springs Road",
+    "city": "Dallas",
+    "cityCode": "DFW",
+    "stateCode": "TX",
+    "postalCode": "75235",
     "countryCode": "US",
     "countryName": "United States",
     "regionName": "North America",
-    "timeZoneRegionName": "America/Los_Angeles",
-    "weatherZone": "ORZ006",
-    "localTime": "2015-05-04T15:50:07.421",
-    "utcOffsetHours": -7,
-    "latitude": 45.588995,
-    "longitude": -122.592901,
-    "elevationFeet": 30,
-    "classification": 1,
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "TXZ119",
+    "localTime": "2015-05-07T07:35:33.868",
+    "utcOffsetHours": -5,
+    "latitude": 32.843909,
+    "longitude": -96.850002,
+    "elevationFeet": 487,
+    "classification": 2,
     "active": true,
-    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
-    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAL?codeType=fs"
    }
   },
   "arrivalAirport": {
-   "requestedCode": "HNL",
+   "requestedCode": "MDW",
    "airport": {
-    "fs": "HNL",
-    "iata": "HNL",
-    "icao": "PHNL",
-    "faa": "PHNL",
-    "name": "Honolulu International Airport",
-    "street1": "300 Rodgers Blvd., #12",
-    "street2": "",
-    "city": "Honolulu",
-    "cityCode": "HNL",
-    "stateCode": "HI",
-    "postalCode": "96819",
+    "fs": "MDW",
+    "iata": "MDW",
+    "icao": "KMDW",
+    "faa": "MDW",
+    "name": "Chicago Midway International Airport",
+    "street1": "5700 South Cicero",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60638",
     "countryCode": "US",
     "countryName": "United States",
     "regionName": "North America",
-    "timeZoneRegionName": "Pacific/Honolulu",
-    "weatherZone": "HIZ002",
-    "localTime": "2015-05-04T12:50:07.421",
-    "utcOffsetHours": -10,
-    "latitude": 21.325833,
-    "longitude": -157.921667,
-    "elevationFeet": 13,
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T07:35:33.868",
+    "utcOffsetHours": -5,
+    "latitude": 41.788136,
+    "longitude": -87.740871,
+    "elevationFeet": 620,
     "classification": 1,
     "active": true,
-    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs",
-    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MDW?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MDW?codeType=fs"
    }
   },
   "date": {
    "year": "2015",
    "month": "5",
-   "day": "4",
-   "interpreted": "2015-05-04"
+   "day": "6",
+   "interpreted": "2015-05-06"
   },
   "hourOfDay": {
    "requested": "0",
@@ -89,199 +88,967 @@
    "requested": "useInlinedReferences",
    "interpreted": "useInlinedReferences"
   },
-  "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/PDX/HNL/dep/2015/5/4"
+  "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/DAL/MDW/dep/2015/05/06"
  },
  "appendix": {},
  "flightStatuses": [
   {
-   "flightId": 536728705,
+   "flightId": 537623091,
    "carrier": {
-    "fs": "AS",
-    "iata": "AS",
-    "icao": "ASA",
-    "name": "Alaska Airlines",
-    "phoneNumber": "1-800-252-7522",
+    "fs": "WN",
+    "iata": "WN",
+    "icao": "SWA",
+    "name": "Southwest Airlines",
+    "phoneNumber": "1-800-435-9792",
     "active": true
    },
-   "flightNumber": "833",
+   "flightNumber": "873",
    "departureAirport": {
-    "fs": "PDX",
-    "iata": "PDX",
-    "icao": "KPDX",
-    "faa": "PDX",
-    "name": "Portland International Airport",
-    "street1": "7000 NE Airport Way",
-    "city": "Portland",
-    "cityCode": "PDX",
-    "stateCode": "OR",
-    "postalCode": "97218",
+    "fs": "DAL",
+    "iata": "DAL",
+    "icao": "KDAL",
+    "faa": "DAL",
+    "name": "Dallas Love Field",
+    "street1": "8008 Cedar Springs Road",
+    "city": "Dallas",
+    "cityCode": "DFW",
+    "stateCode": "TX",
+    "postalCode": "75235",
     "countryCode": "US",
     "countryName": "United States",
     "regionName": "North America",
-    "timeZoneRegionName": "America/Los_Angeles",
-    "weatherZone": "ORZ006",
-    "localTime": "2015-05-04T15:50:07.464",
-    "utcOffsetHours": -7,
-    "latitude": 45.588995,
-    "longitude": -122.592901,
-    "elevationFeet": 30,
-    "classification": 1,
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "TXZ119",
+    "localTime": "2015-05-07T07:35:33.920",
+    "utcOffsetHours": -5,
+    "latitude": 32.843909,
+    "longitude": -96.850002,
+    "elevationFeet": 487,
+    "classification": 2,
     "active": true,
-    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
-    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAL?codeType=fs"
    },
    "arrivalAirport": {
-    "fs": "HNL",
-    "iata": "HNL",
-    "icao": "PHNL",
-    "faa": "PHNL",
-    "name": "Honolulu International Airport",
-    "street1": "300 Rodgers Blvd., #12",
-    "street2": "",
-    "city": "Honolulu",
-    "cityCode": "HNL",
-    "stateCode": "HI",
-    "postalCode": "96819",
+    "fs": "MDW",
+    "iata": "MDW",
+    "icao": "KMDW",
+    "faa": "MDW",
+    "name": "Chicago Midway International Airport",
+    "street1": "5700 South Cicero",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60638",
     "countryCode": "US",
     "countryName": "United States",
     "regionName": "North America",
-    "timeZoneRegionName": "Pacific/Honolulu",
-    "weatherZone": "HIZ002",
-    "localTime": "2015-05-04T12:50:07.464",
-    "utcOffsetHours": -10,
-    "latitude": 21.325833,
-    "longitude": -157.921667,
-    "elevationFeet": 13,
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T07:35:33.920",
+    "utcOffsetHours": -5,
+    "latitude": 41.788136,
+    "longitude": -87.740871,
+    "elevationFeet": 620,
     "classification": 1,
     "active": true,
-    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs",
-    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MDW?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MDW?codeType=fs"
    },
    "departureDate": {
-    "dateLocal": "2015-05-04T07:05:00.000",
-    "dateUtc": "2015-05-04T14:05:00.000Z"
+    "dateLocal": "2015-05-06T06:05:00.000",
+    "dateUtc": "2015-05-06T11:05:00.000Z"
    },
    "arrivalDate": {
-    "dateLocal": "2015-05-04T10:02:00.000",
-    "dateUtc": "2015-05-04T20:02:00.000Z"
+    "dateLocal": "2015-05-06T08:15:00.000",
+    "dateUtc": "2015-05-06T13:15:00.000Z"
+   },
+   "status": "C",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "RY",
+    "restrictions": "F",
+    "downlines": [
+     {
+      "arrivalAirport": {
+       "fs": "PDX",
+       "iata": "PDX",
+       "icao": "KPDX",
+       "faa": "PDX",
+       "name": "Portland International Airport",
+       "street1": "7000 NE Airport Way",
+       "city": "Portland",
+       "cityCode": "PDX",
+       "stateCode": "OR",
+       "postalCode": "97218",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/Los_Angeles",
+       "weatherZone": "ORZ006",
+       "localTime": "2015-05-07T05:35:33.920",
+       "utcOffsetHours": -7,
+       "latitude": 45.588995,
+       "longitude": -122.592901,
+       "elevationFeet": 30,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+      },
+      "flightId": 537656840
+     }
+    ]
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-06T06:05:00.000",
+     "dateUtc": "2015-05-06T11:05:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-06T08:15:00.000",
+     "dateUtc": "2015-05-06T13:15:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-06T06:05:00.000",
+     "dateUtc": "2015-05-06T11:05:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-06T09:00:00.000",
+     "dateUtc": "2015-05-06T14:00:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-06T06:14:00.000",
+     "dateUtc": "2015-05-06T11:14:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-06T09:05:00.000",
+     "dateUtc": "2015-05-06T14:05:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-06T08:15:00.000",
+     "dateUtc": "2015-05-06T13:15:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-06T11:00:00.000",
+     "dateUtc": "2015-05-06T16:00:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-06T08:02:00.000",
+     "dateUtc": "2015-05-06T13:02:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-06T08:02:00.000",
+     "dateUtc": "2015-05-06T13:02:00.000Z"
+    }
+   },
+   "delays": {
+    "departureGateDelayMinutes": 175,
+    "departureRunwayDelayMinutes": 171,
+    "arrivalGateDelayMinutes": 165
+   },
+   "flightDurations": {
+    "scheduledBlockMinutes": 130,
+    "scheduledAirMinutes": 108,
+    "scheduledTaxiOutMinutes": 9,
+    "scheduledTaxiInMinutes": 13
+   },
+   "airportResources": {
+    "departureGate": "W7",
+    "arrivalGate": "B19"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "73W",
+     "name": "Boeing 737-700 (winglets) Passenger",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": false
+    }
+   },
+   "irregularOperations": [
+    {
+      "type": "CANCELLATION",
+      "dateUtc": "2013-02-26T23:00:00.000Z",
+      "message": "Cancelled due to mechanical issue."
+    },
+    {
+      "type": "REPLACED_BY",
+      "relatedFlightId": 24586521,
+      "dateUtc": "2013-02-26T23:00:00.000Z",
+      "message": "New flight created to replace a cancelled flight."
+    }
+  ]
+  },
+  {
+   "flightId": 537623089,
+   "carrier": {
+    "fs": "WN",
+    "iata": "WN",
+    "icao": "SWA",
+    "name": "Southwest Airlines",
+    "phoneNumber": "1-800-435-9792",
+    "active": true
+   },
+   "flightNumber": "2778",
+   "departureAirport": {
+    "fs": "DAL",
+    "iata": "DAL",
+    "icao": "KDAL",
+    "faa": "DAL",
+    "name": "Dallas Love Field",
+    "street1": "8008 Cedar Springs Road",
+    "city": "Dallas",
+    "cityCode": "DFW",
+    "stateCode": "TX",
+    "postalCode": "75235",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "TXZ119",
+    "localTime": "2015-05-07T07:35:33.921",
+    "utcOffsetHours": -5,
+    "latitude": 32.843909,
+    "longitude": -96.850002,
+    "elevationFeet": 487,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAL?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "MDW",
+    "iata": "MDW",
+    "icao": "KMDW",
+    "faa": "MDW",
+    "name": "Chicago Midway International Airport",
+    "street1": "5700 South Cicero",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60638",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T07:35:33.921",
+    "utcOffsetHours": -5,
+    "latitude": 41.788136,
+    "longitude": -87.740871,
+    "elevationFeet": 620,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MDW?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MDW?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-06T08:20:00.000",
+    "dateUtc": "2015-05-06T13:20:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-06T10:30:00.000",
+    "dateUtc": "2015-05-06T15:30:00.000Z"
    },
    "status": "L",
    "schedule": {
     "flightType": "J",
-    "serviceClasses": "RFY",
-    "restrictions": ""
+    "serviceClasses": "RY",
+    "restrictions": "F",
+    "downlines": [
+     {
+      "arrivalAirport": {
+       "fs": "LGA",
+       "iata": "LGA",
+       "icao": "KLGA",
+       "faa": "LGA",
+       "name": "LaGuardia Airport",
+       "street1": "Hangar 7 Center",
+       "city": "New York",
+       "cityCode": "NYC",
+       "stateCode": "NY",
+       "postalCode": "11371",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "NYZ176",
+       "localTime": "2015-05-07T08:35:33.921",
+       "utcOffsetHours": -4,
+       "latitude": 40.774252,
+       "longitude": -73.871617,
+       "elevationFeet": 22,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/LGA?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/LGA?codeType=fs"
+      },
+      "flightId": 537656784
+     },
+     {
+      "arrivalAirport": {
+       "fs": "HOU",
+       "iata": "HOU",
+       "icao": "KHOU",
+       "faa": "HOU",
+       "name": "William P. Hobby Airport",
+       "street1": "7800 Airport Boulevard",
+       "city": "Houston",
+       "cityCode": "HOU",
+       "stateCode": "TX",
+       "postalCode": "77061",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/Chicago",
+       "weatherZone": "TXZ213",
+       "localTime": "2015-05-07T07:35:33.921",
+       "utcOffsetHours": -5,
+       "latitude": 29.654513,
+       "longitude": -95.277018,
+       "elevationFeet": 46,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HOU?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HOU?codeType=fs"
+      },
+      "flightId": 537651130
+     }
+    ]
    },
    "operationalTimes": {
     "publishedDeparture": {
-     "dateLocal": "2015-05-04T07:05:00.000",
-     "dateUtc": "2015-05-04T14:05:00.000Z"
+     "dateLocal": "2015-05-06T08:20:00.000",
+     "dateUtc": "2015-05-06T13:20:00.000Z"
     },
     "publishedArrival": {
-     "dateLocal": "2015-05-04T10:02:00.000",
-     "dateUtc": "2015-05-04T20:02:00.000Z"
+     "dateLocal": "2015-05-06T10:30:00.000",
+     "dateUtc": "2015-05-06T15:30:00.000Z"
     },
     "scheduledGateDeparture": {
-     "dateLocal": "2015-05-04T07:05:00.000",
-     "dateUtc": "2015-05-04T14:05:00.000Z"
+     "dateLocal": "2015-05-06T08:20:00.000",
+     "dateUtc": "2015-05-06T13:20:00.000Z"
     },
     "estimatedGateDeparture": {
-     "dateLocal": "2015-05-04T07:03:00.000",
-     "dateUtc": "2015-05-04T14:03:00.000Z"
+     "dateLocal": "2015-05-06T09:58:00.000",
+     "dateUtc": "2015-05-06T14:58:00.000Z"
     },
     "actualGateDeparture": {
-     "dateLocal": "2015-05-04T07:03:00.000",
-     "dateUtc": "2015-05-04T14:03:00.000Z"
+     "dateLocal": "2015-05-06T09:58:00.000",
+     "dateUtc": "2015-05-06T14:58:00.000Z"
     },
     "flightPlanPlannedDeparture": {
-     "dateLocal": "2015-05-04T07:13:00.000",
-     "dateUtc": "2015-05-04T14:13:00.000Z"
+     "dateLocal": "2015-05-06T09:10:00.000",
+     "dateUtc": "2015-05-06T14:10:00.000Z"
     },
     "estimatedRunwayDeparture": {
-     "dateLocal": "2015-05-04T07:13:00.000",
-     "dateUtc": "2015-05-04T14:13:00.000Z"
+     "dateLocal": "2015-05-06T10:09:00.000",
+     "dateUtc": "2015-05-06T15:09:00.000Z"
     },
     "actualRunwayDeparture": {
-     "dateLocal": "2015-05-04T07:13:00.000",
-     "dateUtc": "2015-05-04T14:13:00.000Z"
+     "dateLocal": "2015-05-06T10:09:00.000",
+     "dateUtc": "2015-05-06T15:09:00.000Z"
     },
     "scheduledGateArrival": {
-     "dateLocal": "2015-05-04T10:02:00.000",
-     "dateUtc": "2015-05-04T20:02:00.000Z"
+     "dateLocal": "2015-05-06T10:30:00.000",
+     "dateUtc": "2015-05-06T15:30:00.000Z"
     },
     "estimatedGateArrival": {
-     "dateLocal": "2015-05-04T09:43:00.000",
-     "dateUtc": "2015-05-04T19:43:00.000Z"
+     "dateLocal": "2015-05-06T11:58:00.000",
+     "dateUtc": "2015-05-06T16:58:00.000Z"
     },
     "actualGateArrival": {
-     "dateLocal": "2015-05-04T09:43:00.000",
-     "dateUtc": "2015-05-04T19:43:00.000Z"
+     "dateLocal": "2015-05-06T11:58:00.000",
+     "dateUtc": "2015-05-06T16:58:00.000Z"
     },
     "flightPlanPlannedArrival": {
-     "dateLocal": "2015-05-04T09:36:00.000",
-     "dateUtc": "2015-05-04T19:36:00.000Z"
+     "dateLocal": "2015-05-06T10:56:00.000",
+     "dateUtc": "2015-05-06T15:56:00.000Z"
     },
     "estimatedRunwayArrival": {
-     "dateLocal": "2015-05-04T09:38:00.000",
-     "dateUtc": "2015-05-04T19:38:00.000Z"
+     "dateLocal": "2015-05-06T11:54:00.000",
+     "dateUtc": "2015-05-06T16:54:00.000Z"
     },
     "actualRunwayArrival": {
-     "dateLocal": "2015-05-04T09:38:00.000",
-     "dateUtc": "2015-05-04T19:38:00.000Z"
+     "dateLocal": "2015-05-06T11:54:00.000",
+     "dateUtc": "2015-05-06T16:54:00.000Z"
     }
    },
-   "codeshares": [
-    {
-     "carrier": {
-      "fs": "DL",
-      "iata": "DL",
-      "icao": "DAL",
-      "name": "Delta Air Lines",
-      "phoneNumber": "1-800-221-1212",
-      "active": true
-     },
-     "flightNumber": "9070",
-     "relationship": "L"
-    },
-    {
-     "carrier": {
-      "fs": "KE",
-      "iata": "KE",
-      "icao": "KAL",
-      "name": "Korean Air",
-      "active": true
-     },
-     "flightNumber": "6250",
-     "relationship": "L"
-    },
-    {
-     "carrier": {
-      "fs": "QF",
-      "iata": "QF",
-      "icao": "QFA",
-      "name": "Qantas",
-      "active": true
-     },
-     "flightNumber": "3712",
-     "relationship": "L"
-    }
-   ],
    "delays": {
-    "arrivalRunwayDelayMinutes": 2
+    "departureGateDelayMinutes": 98,
+    "departureRunwayDelayMinutes": 59,
+    "arrivalGateDelayMinutes": 88,
+    "arrivalRunwayDelayMinutes": 58
    },
    "flightDurations": {
-    "scheduledBlockMinutes": 357,
-    "blockMinutes": 340,
-    "scheduledAirMinutes": 323,
-    "airMinutes": 325,
-    "scheduledTaxiOutMinutes": 8,
-    "taxiOutMinutes": 10,
-    "scheduledTaxiInMinutes": 26,
-    "taxiInMinutes": 5
+    "scheduledBlockMinutes": 130,
+    "blockMinutes": 120,
+    "scheduledAirMinutes": 106,
+    "airMinutes": 105,
+    "scheduledTaxiOutMinutes": 50,
+    "taxiOutMinutes": 11,
+    "taxiInMinutes": 4
    },
    "airportResources": {
-    "departureGate": "B2",
-    "arrivalTerminal": "M",
-    "arrivalGate": "14"
+    "departureGate": "W4",
+    "arrivalGate": "A16"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "73W",
+     "name": "Boeing 737-700 (winglets) Passenger",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": false
+    },
+    "actualEquipment": {
+     "iata": "B737",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    },
+    "tailNumber": "N7709A"
+   }
+  },
+  {
+   "flightId": 537623092,
+   "carrier": {
+    "fs": "WN",
+    "iata": "WN",
+    "icao": "SWA",
+    "name": "Southwest Airlines",
+    "phoneNumber": "1-800-435-9792",
+    "active": true
+   },
+   "flightNumber": "894",
+   "departureAirport": {
+    "fs": "DAL",
+    "iata": "DAL",
+    "icao": "KDAL",
+    "faa": "DAL",
+    "name": "Dallas Love Field",
+    "street1": "8008 Cedar Springs Road",
+    "city": "Dallas",
+    "cityCode": "DFW",
+    "stateCode": "TX",
+    "postalCode": "75235",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "TXZ119",
+    "localTime": "2015-05-07T07:35:33.921",
+    "utcOffsetHours": -5,
+    "latitude": 32.843909,
+    "longitude": -96.850002,
+    "elevationFeet": 487,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAL?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "MDW",
+    "iata": "MDW",
+    "icao": "KMDW",
+    "faa": "MDW",
+    "name": "Chicago Midway International Airport",
+    "street1": "5700 South Cicero",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60638",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T07:35:33.921",
+    "utcOffsetHours": -5,
+    "latitude": 41.788136,
+    "longitude": -87.740871,
+    "elevationFeet": 620,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MDW?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MDW?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-06T12:00:00.000",
+    "dateUtc": "2015-05-06T17:00:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-06T14:10:00.000",
+    "dateUtc": "2015-05-06T19:10:00.000Z"
+   },
+   "status": "L",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "RY",
+    "restrictions": "F",
+    "uplines": [
+     {
+      "departureAirport": {
+       "fs": "RDU",
+       "iata": "RDU",
+       "icao": "KRDU",
+       "faa": "RDU",
+       "name": "Raleigh-Durham International Airport",
+       "city": "Raleigh/Durham",
+       "cityCode": "RDU",
+       "stateCode": "NC",
+       "postalCode": "27623",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "NCZ041",
+       "localTime": "2015-05-07T08:35:33.921",
+       "utcOffsetHours": -4,
+       "latitude": 35.873592,
+       "longitude": -78.790862,
+       "elevationFeet": 435,
+       "classification": 2,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/RDU?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/RDU?codeType=fs"
+      },
+      "flightId": 537673245
+     },
+     {
+      "departureAirport": {
+       "fs": "FLL",
+       "iata": "FLL",
+       "icao": "KFLL",
+       "faa": "FLL",
+       "name": "Fort Lauderdale-Hollywood International Airport",
+       "street1": "320 Terminal Drive",
+       "city": "Fort Lauderdale",
+       "cityCode": "FLL",
+       "stateCode": "FL",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "FLZ072",
+       "localTime": "2015-05-07T08:35:33.921",
+       "utcOffsetHours": -4,
+       "latitude": 26.071492,
+       "longitude": -80.144908,
+       "elevationFeet": 9,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/FLL?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/FLL?codeType=fs"
+      },
+      "flightId": 537631828
+     }
+    ],
+    "downlines": [
+     {
+      "arrivalAirport": {
+       "fs": "MCI",
+       "iata": "MCI",
+       "icao": "KMCI",
+       "faa": "MCI",
+       "name": "Kansas City International Airport",
+       "street1": "601 Brasilia Avenue",
+       "city": "Kansas City",
+       "cityCode": "MKC",
+       "stateCode": "MO",
+       "postalCode": "64153",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/Chicago",
+       "weatherZone": "MOZ028",
+       "localTime": "2015-05-07T07:35:33.921",
+       "utcOffsetHours": -5,
+       "latitude": 39.293807,
+       "longitude": -94.719925,
+       "elevationFeet": 1026,
+       "classification": 2,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCI?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCI?codeType=fs"
+      },
+      "flightId": 537656791
+     },
+     {
+      "arrivalAirport": {
+       "fs": "ATL",
+       "iata": "ATL",
+       "icao": "KATL",
+       "faa": "ATL",
+       "name": "Hartsfield-Jackson Atlanta International Airport",
+       "street1": "6000 N Terminal Parkway",
+       "street2": "",
+       "city": "Atlanta",
+       "cityCode": "ATL",
+       "stateCode": "GA",
+       "postalCode": "30320",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "GAZ044",
+       "localTime": "2015-05-07T08:35:33.921",
+       "utcOffsetHours": -4,
+       "latitude": 33.640067,
+       "longitude": -84.44403,
+       "elevationFeet": 1026,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ATL?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/ATL?codeType=fs"
+      },
+      "flightId": 537655723
+     },
+     {
+      "arrivalAirport": {
+       "fs": "MSY",
+       "iata": "MSY",
+       "icao": "KMSY",
+       "faa": "MSY",
+       "name": "Louis Armstrong New Orleans International Airport",
+       "street1": "900 Airline Highway",
+       "city": "New Orleans",
+       "cityCode": "MSY",
+       "stateCode": "LA",
+       "postalCode": "70062",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/Chicago",
+       "weatherZone": "LAZ061",
+       "localTime": "2015-05-07T07:35:33.921",
+       "utcOffsetHours": -5,
+       "latitude": 29.984564,
+       "longitude": -90.256391,
+       "elevationFeet": 4,
+       "classification": 2,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MSY?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MSY?codeType=fs"
+      },
+      "flightId": 537606385
+     },
+     {
+      "arrivalAirport": {
+       "fs": "TPA",
+       "iata": "TPA",
+       "icao": "KTPA",
+       "faa": "TPA",
+       "name": "Tampa International Airport",
+       "street1": "5507 West Spruce Street",
+       "city": "Tampa",
+       "cityCode": "TPA",
+       "stateCode": "FL",
+       "postalCode": "33607",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "FLZ251",
+       "localTime": "2015-05-07T08:35:33.921",
+       "utcOffsetHours": -4,
+       "latitude": 27.979869,
+       "longitude": -82.535415,
+       "elevationFeet": 26,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/TPA?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/TPA?codeType=fs"
+      },
+      "flightId": 537660721
+     }
+    ]
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-06T12:00:00.000",
+     "dateUtc": "2015-05-06T17:00:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-06T14:10:00.000",
+     "dateUtc": "2015-05-06T19:10:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-06T12:00:00.000",
+     "dateUtc": "2015-05-06T17:00:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-06T12:23:00.000",
+     "dateUtc": "2015-05-06T17:23:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-06T12:23:00.000",
+     "dateUtc": "2015-05-06T17:23:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-06T12:10:00.000",
+     "dateUtc": "2015-05-06T17:10:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-06T12:38:00.000",
+     "dateUtc": "2015-05-06T17:38:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-06T12:38:00.000",
+     "dateUtc": "2015-05-06T17:38:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-06T14:10:00.000",
+     "dateUtc": "2015-05-06T19:10:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-06T14:25:00.000",
+     "dateUtc": "2015-05-06T19:25:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-06T14:25:00.000",
+     "dateUtc": "2015-05-06T19:25:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-06T13:55:00.000",
+     "dateUtc": "2015-05-06T18:55:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-06T14:22:00.000",
+     "dateUtc": "2015-05-06T19:22:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-06T14:22:00.000",
+     "dateUtc": "2015-05-06T19:22:00.000Z"
+    }
+   },
+   "delays": {
+    "departureGateDelayMinutes": 23,
+    "departureRunwayDelayMinutes": 28,
+    "arrivalGateDelayMinutes": 15,
+    "arrivalRunwayDelayMinutes": 27
+   },
+   "flightDurations": {
+    "scheduledBlockMinutes": 130,
+    "blockMinutes": 122,
+    "scheduledAirMinutes": 105,
+    "airMinutes": 104,
+    "scheduledTaxiOutMinutes": 10,
+    "taxiOutMinutes": 15,
+    "scheduledTaxiInMinutes": 15,
+    "taxiInMinutes": 3
+   },
+   "airportResources": {
+    "departureGate": "W5",
+    "arrivalGate": "A14"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "73W",
+     "name": "Boeing 737-700 (winglets) Passenger",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": false
+    },
+    "actualEquipment": {
+     "iata": "B737",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    }
+   }
+  },
+  {
+   "flightId": 537623090,
+   "carrier": {
+    "fs": "WN",
+    "iata": "WN",
+    "icao": "SWA",
+    "name": "Southwest Airlines",
+    "phoneNumber": "1-800-435-9792",
+    "active": true
+   },
+   "flightNumber": "700",
+   "departureAirport": {
+    "fs": "DAL",
+    "iata": "DAL",
+    "icao": "KDAL",
+    "faa": "DAL",
+    "name": "Dallas Love Field",
+    "street1": "8008 Cedar Springs Road",
+    "city": "Dallas",
+    "cityCode": "DFW",
+    "stateCode": "TX",
+    "postalCode": "75235",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "TXZ119",
+    "localTime": "2015-05-07T07:35:33.922",
+    "utcOffsetHours": -5,
+    "latitude": 32.843909,
+    "longitude": -96.850002,
+    "elevationFeet": 487,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAL?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "MDW",
+    "iata": "MDW",
+    "icao": "KMDW",
+    "faa": "MDW",
+    "name": "Chicago Midway International Airport",
+    "street1": "5700 South Cicero",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60638",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T07:35:33.922",
+    "utcOffsetHours": -5,
+    "latitude": 41.788136,
+    "longitude": -87.740871,
+    "elevationFeet": 620,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MDW?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MDW?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-06T16:10:00.000",
+    "dateUtc": "2015-05-06T21:10:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-06T18:30:00.000",
+    "dateUtc": "2015-05-06T23:30:00.000Z"
+   },
+   "status": "L",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "RY",
+    "restrictions": "F",
+    "uplines": [
+     {
+      "departureAirport": {
+       "fs": "MCO",
+       "iata": "MCO",
+       "icao": "KMCO",
+       "faa": "MCO",
+       "name": "Orlando International Airport",
+       "street1": "One Airport Boulevard",
+       "street2": "",
+       "city": "Orlando",
+       "cityCode": "ORL",
+       "stateCode": "FL",
+       "postalCode": "32827-4399",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "FLZ045",
+       "localTime": "2015-05-07T08:35:33.922",
+       "utcOffsetHours": -4,
+       "latitude": 28.432177,
+       "longitude": -81.308301,
+       "elevationFeet": 96,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCO?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCO?codeType=fs"
+      },
+      "flightId": 537655978
+     }
+    ]
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-06T16:10:00.000",
+     "dateUtc": "2015-05-06T21:10:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-06T18:30:00.000",
+     "dateUtc": "2015-05-06T23:30:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-06T16:10:00.000",
+     "dateUtc": "2015-05-06T21:10:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-06T16:15:00.000",
+     "dateUtc": "2015-05-06T21:15:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-06T16:15:00.000",
+     "dateUtc": "2015-05-06T21:15:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-06T16:26:00.000",
+     "dateUtc": "2015-05-06T21:26:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-06T16:26:00.000",
+     "dateUtc": "2015-05-06T21:26:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-06T16:26:00.000",
+     "dateUtc": "2015-05-06T21:26:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-06T18:30:00.000",
+     "dateUtc": "2015-05-06T23:30:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-06T18:18:00.000",
+     "dateUtc": "2015-05-06T23:18:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-06T18:18:00.000",
+     "dateUtc": "2015-05-06T23:18:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-06T18:11:00.000",
+     "dateUtc": "2015-05-06T23:11:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-06T18:07:00.000",
+     "dateUtc": "2015-05-06T23:07:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-06T18:07:00.000",
+     "dateUtc": "2015-05-06T23:07:00.000Z"
+    }
+   },
+   "delays": {
+    "departureGateDelayMinutes": 5
+   },
+   "flightDurations": {
+    "scheduledBlockMinutes": 140,
+    "blockMinutes": 123,
+    "scheduledAirMinutes": 105,
+    "airMinutes": 101,
+    "scheduledTaxiOutMinutes": 16,
+    "taxiOutMinutes": 11,
+    "scheduledTaxiInMinutes": 19,
+    "taxiInMinutes": 11
+   },
+   "airportResources": {
+    "departureTerminal": "1",
+    "arrivalGate": "B12"
    },
    "flightEquipment": {
     "scheduledEquipment": {
@@ -300,195 +1067,209 @@
      "widebody": false,
      "regional": false
     },
-    "tailNumber": "N584AS"
+    "tailNumber": "N8311Q"
    }
   },
   {
-   "flightId": 536728706,
+   "flightId": 537623093,
    "carrier": {
-    "fs": "HA",
-    "iata": "HA",
-    "icao": "HAL",
-    "name": "Hawaiian Airlines",
+    "fs": "WN",
+    "iata": "WN",
+    "icao": "SWA",
+    "name": "Southwest Airlines",
+    "phoneNumber": "1-800-435-9792",
     "active": true
    },
-   "flightNumber": "25",
+   "flightNumber": "420",
    "departureAirport": {
-    "fs": "PDX",
-    "iata": "PDX",
-    "icao": "KPDX",
-    "faa": "PDX",
-    "name": "Portland International Airport",
-    "street1": "7000 NE Airport Way",
-    "city": "Portland",
-    "cityCode": "PDX",
-    "stateCode": "OR",
-    "postalCode": "97218",
+    "fs": "DAL",
+    "iata": "DAL",
+    "icao": "KDAL",
+    "faa": "DAL",
+    "name": "Dallas Love Field",
+    "street1": "8008 Cedar Springs Road",
+    "city": "Dallas",
+    "cityCode": "DFW",
+    "stateCode": "TX",
+    "postalCode": "75235",
     "countryCode": "US",
     "countryName": "United States",
     "regionName": "North America",
-    "timeZoneRegionName": "America/Los_Angeles",
-    "weatherZone": "ORZ006",
-    "localTime": "2015-05-04T15:50:07.465",
-    "utcOffsetHours": -7,
-    "latitude": 45.588995,
-    "longitude": -122.592901,
-    "elevationFeet": 30,
-    "classification": 1,
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "TXZ119",
+    "localTime": "2015-05-07T07:35:33.922",
+    "utcOffsetHours": -5,
+    "latitude": 32.843909,
+    "longitude": -96.850002,
+    "elevationFeet": 487,
+    "classification": 2,
     "active": true,
-    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/PDX?codeType=fs",
-    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/PDX?codeType=fs"
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/DAL?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/DAL?codeType=fs"
    },
    "arrivalAirport": {
-    "fs": "HNL",
-    "iata": "HNL",
-    "icao": "PHNL",
-    "faa": "PHNL",
-    "name": "Honolulu International Airport",
-    "street1": "300 Rodgers Blvd., #12",
-    "street2": "",
-    "city": "Honolulu",
-    "cityCode": "HNL",
-    "stateCode": "HI",
-    "postalCode": "96819",
+    "fs": "MDW",
+    "iata": "MDW",
+    "icao": "KMDW",
+    "faa": "MDW",
+    "name": "Chicago Midway International Airport",
+    "street1": "5700 South Cicero",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60638",
     "countryCode": "US",
     "countryName": "United States",
     "regionName": "North America",
-    "timeZoneRegionName": "Pacific/Honolulu",
-    "weatherZone": "HIZ002",
-    "localTime": "2015-05-04T12:50:07.465",
-    "utcOffsetHours": -10,
-    "latitude": 21.325833,
-    "longitude": -157.921667,
-    "elevationFeet": 13,
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T07:35:33.922",
+    "utcOffsetHours": -5,
+    "latitude": 41.788136,
+    "longitude": -87.740871,
+    "elevationFeet": 620,
     "classification": 1,
     "active": true,
-    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/HNL?codeType=fs",
-    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/HNL?codeType=fs"
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MDW?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MDW?codeType=fs"
    },
    "departureDate": {
-    "dateLocal": "2015-05-04T10:15:00.000",
-    "dateUtc": "2015-05-04T17:15:00.000Z"
+    "dateLocal": "2015-05-06T19:20:00.000",
+    "dateUtc": "2015-05-07T00:20:00.000Z"
    },
    "arrivalDate": {
-    "dateLocal": "2015-05-04T13:10:00.000",
-    "dateUtc": "2015-05-04T23:10:00.000Z"
+    "dateLocal": "2015-05-06T21:30:00.000",
+    "dateUtc": "2015-05-07T02:30:00.000Z"
    },
-   "status": "A",
+   "status": "L",
    "schedule": {
     "flightType": "J",
-    "serviceClasses": "RFJY",
-    "restrictions": ""
+    "serviceClasses": "RY",
+    "restrictions": "F",
+    "downlines": [
+     {
+      "arrivalAirport": {
+       "fs": "BWI",
+       "iata": "BWI",
+       "icao": "KBWI",
+       "faa": "BWI",
+       "name": "Baltimore/Wash International Thurgood Marshall Airport",
+       "city": "Baltimore",
+       "cityCode": "BWI",
+       "stateCode": "MD",
+       "postalCode": "21240",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/New_York",
+       "weatherZone": "MDZ014",
+       "localTime": "2015-05-07T08:35:33.922",
+       "utcOffsetHours": -4,
+       "latitude": 39.179526,
+       "longitude": -76.668941,
+       "elevationFeet": 146,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/BWI?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/BWI?codeType=fs"
+      },
+      "flightId": 537656680
+     }
+    ]
    },
    "operationalTimes": {
     "publishedDeparture": {
-     "dateLocal": "2015-05-04T10:15:00.000",
-     "dateUtc": "2015-05-04T17:15:00.000Z"
+     "dateLocal": "2015-05-06T19:20:00.000",
+     "dateUtc": "2015-05-07T00:20:00.000Z"
     },
     "publishedArrival": {
-     "dateLocal": "2015-05-04T13:10:00.000",
-     "dateUtc": "2015-05-04T23:10:00.000Z"
+     "dateLocal": "2015-05-06T21:30:00.000",
+     "dateUtc": "2015-05-07T02:30:00.000Z"
     },
     "scheduledGateDeparture": {
-     "dateLocal": "2015-05-04T10:15:00.000",
-     "dateUtc": "2015-05-04T17:15:00.000Z"
+     "dateLocal": "2015-05-06T19:20:00.000",
+     "dateUtc": "2015-05-07T00:20:00.000Z"
     },
     "estimatedGateDeparture": {
-     "dateLocal": "2015-05-04T10:09:00.000",
-     "dateUtc": "2015-05-04T17:09:00.000Z"
+     "dateLocal": "2015-05-06T19:27:00.000",
+     "dateUtc": "2015-05-07T00:27:00.000Z"
     },
     "actualGateDeparture": {
-     "dateLocal": "2015-05-04T10:09:00.000",
-     "dateUtc": "2015-05-04T17:09:00.000Z"
+     "dateLocal": "2015-05-06T19:27:00.000",
+     "dateUtc": "2015-05-07T00:27:00.000Z"
     },
     "flightPlanPlannedDeparture": {
-     "dateLocal": "2015-05-04T10:28:00.000",
-     "dateUtc": "2015-05-04T17:28:00.000Z"
+     "dateLocal": "2015-05-06T19:30:00.000",
+     "dateUtc": "2015-05-07T00:30:00.000Z"
     },
     "estimatedRunwayDeparture": {
-     "dateLocal": "2015-05-04T10:28:00.000",
-     "dateUtc": "2015-05-04T17:28:00.000Z"
+     "dateLocal": "2015-05-06T19:34:00.000",
+     "dateUtc": "2015-05-07T00:34:00.000Z"
     },
     "actualRunwayDeparture": {
-     "dateLocal": "2015-05-04T10:28:00.000",
-     "dateUtc": "2015-05-04T17:28:00.000Z"
+     "dateLocal": "2015-05-06T19:34:00.000",
+     "dateUtc": "2015-05-07T00:34:00.000Z"
     },
     "scheduledGateArrival": {
-     "dateLocal": "2015-05-04T13:10:00.000",
-     "dateUtc": "2015-05-04T23:10:00.000Z"
+     "dateLocal": "2015-05-06T21:30:00.000",
+     "dateUtc": "2015-05-07T02:30:00.000Z"
     },
     "estimatedGateArrival": {
-     "dateLocal": "2015-05-04T13:19:00.000",
-     "dateUtc": "2015-05-04T23:19:00.000Z"
+     "dateLocal": "2015-05-06T21:17:00.000",
+     "dateUtc": "2015-05-07T02:17:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-06T21:17:00.000",
+     "dateUtc": "2015-05-07T02:17:00.000Z"
     },
     "flightPlanPlannedArrival": {
-     "dateLocal": "2015-05-04T12:55:00.000",
-     "dateUtc": "2015-05-04T22:55:00.000Z"
+     "dateLocal": "2015-05-06T21:14:00.000",
+     "dateUtc": "2015-05-07T02:14:00.000Z"
     },
     "estimatedRunwayArrival": {
-     "dateLocal": "2015-05-04T12:56:00.000",
-     "dateUtc": "2015-05-04T22:56:00.000Z"
+     "dateLocal": "2015-05-06T21:14:00.000",
+     "dateUtc": "2015-05-07T02:14:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-06T21:14:00.000",
+     "dateUtc": "2015-05-07T02:14:00.000Z"
     }
    },
-   "codeshares": [
-    {
-     "carrier": {
-      "fs": "CI",
-      "iata": "CI",
-      "icao": "CAL",
-      "name": "China Airlines",
-      "active": true
-     },
-     "flightNumber": "9205",
-     "relationship": "L"
-    },
-    {
-     "carrier": {
-      "fs": "KE",
-      "iata": "KE",
-      "icao": "KAL",
-      "name": "Korean Air",
-      "active": true
-     },
-     "flightNumber": "7882",
-     "relationship": "L"
-    }
-   ],
    "delays": {
-    "arrivalGateDelayMinutes": 9,
-    "arrivalRunwayDelayMinutes": 1
+    "departureGateDelayMinutes": 7,
+    "departureRunwayDelayMinutes": 4
    },
    "flightDurations": {
-    "scheduledBlockMinutes": 355,
-    "scheduledAirMinutes": 327,
-    "scheduledTaxiOutMinutes": 13,
-    "taxiOutMinutes": 19,
-    "scheduledTaxiInMinutes": 15
+    "scheduledBlockMinutes": 130,
+    "blockMinutes": 110,
+    "scheduledAirMinutes": 104,
+    "airMinutes": 100,
+    "scheduledTaxiOutMinutes": 10,
+    "taxiOutMinutes": 7,
+    "scheduledTaxiInMinutes": 16,
+    "taxiInMinutes": 3
    },
    "airportResources": {
-    "departureGate": "D10",
-    "arrivalTerminal": "M",
-    "arrivalGate": "28",
-    "baggage": "-"
+    "departureTerminal": "1",
+    "arrivalGate": "B23"
    },
    "flightEquipment": {
     "scheduledEquipment": {
-     "iata": "332",
-     "name": "Airbus Industrie A330-200",
+     "iata": "73W",
+     "name": "Boeing 737-700 (winglets) Passenger",
      "turboProp": false,
      "jet": true,
-     "widebody": true,
+     "widebody": false,
      "regional": false
     },
     "actualEquipment": {
-     "iata": "A332",
+     "iata": "B737",
      "name": "??",
      "turboProp": false,
      "jet": false,
      "widebody": false,
      "regional": false
-    },
-    "tailNumber": "N393HA"
+    }
    }
   }
  ]

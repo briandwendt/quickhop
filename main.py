@@ -100,13 +100,37 @@ def flights(origin, destination, year, month, day):
     # Send and store the HTTP GET request
     r = requests.get(fs_url, params=fs_params)
 
+    # If no HTTP response, return to the search form
+    if r.status_code != 200:
+        flash('Flights data unavailable at this time.')
+        return redirect(url_for('search'))
+
     # Build the flights dict
     flights = r.json()
+
+    # For local testing without API requests:
+    # import json
+    # f = open("sample_response.json", "r")
+    # flights = json.loads(f.read())
+    # f.close()
 
     # If there are errors, return to the search form
     if 'error' in flights:
         flash(flights['error']['errorMessage'])
         return redirect(url_for('search'))
 
+    # Count the flights
+    if 'flightStatuses' in flights:
+        count = 0
+        for flight in flights['flightStatuses']:
+            count += 1
+    else:
+        flash('No flights found for {0} to {1}.'.format(origin, destination))
+        return redirect(url_for('search'))
+
+    if count == 0:
+        flash('No flights found for {0} to {1}.'.format(origin, destination))
+        return redirect(url_for('search'))
+
     # Render the flights list page
-    return render_template('flights.html', flights=flights)
+    return render_template('flights.html', flights=flights, count=count)
