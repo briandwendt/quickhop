@@ -1,0 +1,791 @@
+{
+ "request": {
+  "departureAirport": {
+   "requestedCode": "ORD",
+   "airport": {
+    "fs": "ORD",
+    "iata": "ORD",
+    "icao": "KORD",
+    "faa": "ORD",
+    "name": "O'Hare International Airport",
+    "street1": "10000 West O'Hare",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60666",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T17:33:23.172",
+    "utcOffsetHours": -5,
+    "latitude": 41.976912,
+    "longitude": -87.904876,
+    "elevationFeet": 668,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+   }
+  },
+  "arrivalAirport": {
+   "requestedCode": "MCI",
+   "airport": {
+    "fs": "MCI",
+    "iata": "MCI",
+    "icao": "KMCI",
+    "faa": "MCI",
+    "name": "Kansas City International Airport",
+    "street1": "601 Brasilia Avenue",
+    "city": "Kansas City",
+    "cityCode": "MKC",
+    "stateCode": "MO",
+    "postalCode": "64153",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "MOZ028",
+    "localTime": "2015-05-07T17:33:23.172",
+    "utcOffsetHours": -5,
+    "latitude": 39.293807,
+    "longitude": -94.719925,
+    "elevationFeet": 1026,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCI?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCI?codeType=fs"
+   }
+  },
+  "date": {
+   "year": "2015",
+   "month": "5",
+   "day": "7",
+   "interpreted": "2015-05-07"
+  },
+  "hourOfDay": {
+   "requested": "0",
+   "interpreted": 0
+  },
+  "utc": {
+   "requested": "false",
+   "interpreted": false
+  },
+  "numHours": {
+   "requested": "24",
+   "interpreted": 24
+  },
+  "codeType": {
+   "requested": "IATA",
+   "interpreted": "IATA"
+  },
+  "maxFlights": {
+   "requested": "3",
+   "interpreted": 3
+  },
+  "extendedOptions": {
+   "requested": "useInlinedReferences",
+   "interpreted": "useInlinedReferences"
+  },
+  "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/ORD/MCI/dep/2015/5/7"
+ },
+ "appendix": {},
+ "flightStatuses": [
+  {
+   "flightId": 538128864,
+   "carrier": {
+    "fs": "YX",
+    "iata": "YX",
+    "icao": "RPA",
+    "name": "Republic Airlines",
+    "active": true
+   },
+   "flightNumber": "4324",
+   "departureAirport": {
+    "fs": "ORD",
+    "iata": "ORD",
+    "icao": "KORD",
+    "faa": "ORD",
+    "name": "O'Hare International Airport",
+    "street1": "10000 West O'Hare",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60666",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T17:33:23.271",
+    "utcOffsetHours": -5,
+    "latitude": 41.976912,
+    "longitude": -87.904876,
+    "elevationFeet": 668,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "MCI",
+    "iata": "MCI",
+    "icao": "KMCI",
+    "faa": "MCI",
+    "name": "Kansas City International Airport",
+    "street1": "601 Brasilia Avenue",
+    "city": "Kansas City",
+    "cityCode": "MKC",
+    "stateCode": "MO",
+    "postalCode": "64153",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "MOZ028",
+    "localTime": "2015-05-07T17:33:23.271",
+    "utcOffsetHours": -5,
+    "latitude": 39.293807,
+    "longitude": -94.719925,
+    "elevationFeet": 1026,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCI?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCI?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-07T07:21:00.000",
+    "dateUtc": "2015-05-07T12:21:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-07T09:01:00.000",
+    "dateUtc": "2015-05-07T14:01:00.000Z"
+   },
+   "status": "L",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "FY",
+    "restrictions": "",
+    "downlines": [
+     {
+      "arrivalAirport": {
+       "fs": "ORD",
+       "iata": "ORD",
+       "icao": "KORD",
+       "faa": "ORD",
+       "name": "O'Hare International Airport",
+       "street1": "10000 West O'Hare",
+       "city": "Chicago",
+       "cityCode": "CHI",
+       "stateCode": "IL",
+       "postalCode": "60666",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/Chicago",
+       "weatherZone": "ILZ014",
+       "localTime": "2015-05-07T17:33:23.271",
+       "utcOffsetHours": -5,
+       "latitude": 41.976912,
+       "longitude": -87.904876,
+       "elevationFeet": 668,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+      },
+      "flightId": 538118794
+     }
+    ]
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-07T07:21:00.000",
+     "dateUtc": "2015-05-07T12:21:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-07T09:01:00.000",
+     "dateUtc": "2015-05-07T14:01:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-07T07:21:00.000",
+     "dateUtc": "2015-05-07T12:21:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-07T07:15:00.000",
+     "dateUtc": "2015-05-07T12:15:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-07T07:15:00.000",
+     "dateUtc": "2015-05-07T12:15:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-07T07:33:00.000",
+     "dateUtc": "2015-05-07T12:33:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-07T07:33:00.000",
+     "dateUtc": "2015-05-07T12:33:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-07T07:33:00.000",
+     "dateUtc": "2015-05-07T12:33:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-07T09:01:00.000",
+     "dateUtc": "2015-05-07T14:01:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-07T08:41:00.000",
+     "dateUtc": "2015-05-07T13:41:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-07T08:41:00.000",
+     "dateUtc": "2015-05-07T13:41:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-07T08:57:00.000",
+     "dateUtc": "2015-05-07T13:57:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-07T08:36:00.000",
+     "dateUtc": "2015-05-07T13:36:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-07T08:36:00.000",
+     "dateUtc": "2015-05-07T13:36:00.000Z"
+    }
+   },
+   "codeshares": [
+    {
+     "carrier": {
+      "fs": "AA",
+      "iata": "AA",
+      "icao": "AAL",
+      "name": "American Airlines",
+      "phoneNumber": "1-800-433-7300",
+      "active": true
+     },
+     "flightNumber": "4324",
+     "relationship": "X"
+    },
+    {
+     "carrier": {
+      "fs": "AS",
+      "iata": "AS",
+      "icao": "ASA",
+      "name": "Alaska Airlines",
+      "phoneNumber": "1-800-252-7522",
+      "active": true
+     },
+     "flightNumber": "4050",
+     "relationship": "Z"
+    },
+    {
+     "carrier": {
+      "fs": "BA",
+      "iata": "BA",
+      "icao": "BAW",
+      "name": "British Airways",
+      "phoneNumber": "1-800-AIRWAYS",
+      "active": true
+     },
+     "flightNumber": "5093",
+     "relationship": "Z"
+    },
+    {
+     "carrier": {
+      "fs": "US",
+      "iata": "US",
+      "icao": "AWE",
+      "name": "US Airways",
+      "phoneNumber": "1-800-943-5436",
+      "active": true
+     },
+     "flightNumber": "4324",
+     "relationship": "Z"
+    }
+   ],
+   "flightDurations": {
+    "scheduledBlockMinutes": 100,
+    "blockMinutes": 86,
+    "scheduledAirMinutes": 84,
+    "airMinutes": 63,
+    "scheduledTaxiOutMinutes": 12,
+    "taxiOutMinutes": 18,
+    "scheduledTaxiInMinutes": 4,
+    "taxiInMinutes": 5
+   },
+   "airportResources": {
+    "departureTerminal": "3",
+    "departureGate": "L2C",
+    "arrivalTerminal": "C",
+    "arrivalGate": "83",
+    "baggage": "C1"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "E75",
+     "name": "Embraer 175",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": true
+    },
+    "actualEquipment": {
+     "iata": "E170",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    },
+    "tailNumber": "N411YX"
+   }
+  },
+  {
+   "flightId": 538128867,
+   "carrier": {
+    "fs": "S5",
+    "iata": "S5",
+    "icao": "TCF",
+    "name": "Shuttle America",
+    "active": true
+   },
+   "flightNumber": "3574",
+   "departureAirport": {
+    "fs": "ORD",
+    "iata": "ORD",
+    "icao": "KORD",
+    "faa": "ORD",
+    "name": "O'Hare International Airport",
+    "street1": "10000 West O'Hare",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60666",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T17:33:23.271",
+    "utcOffsetHours": -5,
+    "latitude": 41.976912,
+    "longitude": -87.904876,
+    "elevationFeet": 668,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "MCI",
+    "iata": "MCI",
+    "icao": "KMCI",
+    "faa": "MCI",
+    "name": "Kansas City International Airport",
+    "street1": "601 Brasilia Avenue",
+    "city": "Kansas City",
+    "cityCode": "MKC",
+    "stateCode": "MO",
+    "postalCode": "64153",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "MOZ028",
+    "localTime": "2015-05-07T17:33:23.271",
+    "utcOffsetHours": -5,
+    "latitude": 39.293807,
+    "longitude": -94.719925,
+    "elevationFeet": 1026,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCI?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCI?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-07T07:30:00.000",
+    "dateUtc": "2015-05-07T12:30:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-07T09:07:00.000",
+    "dateUtc": "2015-05-07T14:07:00.000Z"
+   },
+   "status": "L",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "FJY",
+    "restrictions": ""
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-07T07:30:00.000",
+     "dateUtc": "2015-05-07T12:30:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-07T09:07:00.000",
+     "dateUtc": "2015-05-07T14:07:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-07T07:30:00.000",
+     "dateUtc": "2015-05-07T12:30:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-07T07:26:00.000",
+     "dateUtc": "2015-05-07T12:26:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-07T07:26:00.000",
+     "dateUtc": "2015-05-07T12:26:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-07T07:47:00.000",
+     "dateUtc": "2015-05-07T12:47:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-07T07:41:00.000",
+     "dateUtc": "2015-05-07T12:41:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-07T07:41:00.000",
+     "dateUtc": "2015-05-07T12:41:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-07T09:07:00.000",
+     "dateUtc": "2015-05-07T14:07:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-07T08:58:00.000",
+     "dateUtc": "2015-05-07T13:58:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-07T08:58:00.000",
+     "dateUtc": "2015-05-07T13:58:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-07T08:54:00.000",
+     "dateUtc": "2015-05-07T13:54:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-07T08:50:00.000",
+     "dateUtc": "2015-05-07T13:50:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-07T08:50:00.000",
+     "dateUtc": "2015-05-07T13:50:00.000Z"
+    }
+   },
+   "codeshares": [
+    {
+     "carrier": {
+      "fs": "UA",
+      "iata": "UA",
+      "icao": "UAL",
+      "name": "United Airlines",
+      "phoneNumber": "1-800-864-8331",
+      "active": true
+     },
+     "flightNumber": "3574",
+     "relationship": "X"
+    },
+    {
+     "carrier": {
+      "fs": "AC",
+      "iata": "AC",
+      "icao": "ACA",
+      "name": "Air Canada",
+      "phoneNumber": "1-800-247-2262",
+      "active": true
+     },
+     "flightNumber": "4613",
+     "relationship": "Z"
+    }
+   ],
+   "flightDurations": {
+    "scheduledBlockMinutes": 97,
+    "blockMinutes": 92,
+    "scheduledAirMinutes": 67,
+    "airMinutes": 69,
+    "scheduledTaxiOutMinutes": 17,
+    "taxiOutMinutes": 15,
+    "scheduledTaxiInMinutes": 13,
+    "taxiInMinutes": 8
+   },
+   "airportResources": {
+    "departureTerminal": "1",
+    "departureGate": "C6",
+    "arrivalTerminal": "C",
+    "arrivalGate": "62"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "E70",
+     "name": "Embraer 170",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": true
+    },
+    "actualEquipment": {
+     "iata": "E170",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    },
+    "tailNumber": "N648RW"
+   }
+  },
+  {
+   "flightId": 538128855,
+   "carrier": {
+    "fs": "UA",
+    "iata": "UA",
+    "icao": "UAL",
+    "name": "United Airlines",
+    "phoneNumber": "1-800-864-8331",
+    "active": true
+   },
+   "flightNumber": "1452",
+   "departureAirport": {
+    "fs": "ORD",
+    "iata": "ORD",
+    "icao": "KORD",
+    "faa": "ORD",
+    "name": "O'Hare International Airport",
+    "street1": "10000 West O'Hare",
+    "city": "Chicago",
+    "cityCode": "CHI",
+    "stateCode": "IL",
+    "postalCode": "60666",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "ILZ014",
+    "localTime": "2015-05-07T17:33:23.273",
+    "utcOffsetHours": -5,
+    "latitude": 41.976912,
+    "longitude": -87.904876,
+    "elevationFeet": 668,
+    "classification": 1,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/ORD?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/ORD?codeType=fs"
+   },
+   "arrivalAirport": {
+    "fs": "MCI",
+    "iata": "MCI",
+    "icao": "KMCI",
+    "faa": "MCI",
+    "name": "Kansas City International Airport",
+    "street1": "601 Brasilia Avenue",
+    "city": "Kansas City",
+    "cityCode": "MKC",
+    "stateCode": "MO",
+    "postalCode": "64153",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "MOZ028",
+    "localTime": "2015-05-07T17:33:23.273",
+    "utcOffsetHours": -5,
+    "latitude": 39.293807,
+    "longitude": -94.719925,
+    "elevationFeet": 1026,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/MCI?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/MCI?codeType=fs"
+   },
+   "divertedAirport": {
+    "fs": "OMA",
+    "iata": "OMA",
+    "icao": "KOMA",
+    "faa": "OMA",
+    "name": "Eppley Airfield",
+    "street1": "",
+    "street2": "",
+    "city": "Omaha",
+    "cityCode": "OMA",
+    "stateCode": "NE",
+    "postalCode": "68110",
+    "countryCode": "US",
+    "countryName": "United States",
+    "regionName": "North America",
+    "timeZoneRegionName": "America/Chicago",
+    "weatherZone": "NEZ052",
+    "localTime": "2015-05-07T17:33:23.273",
+    "utcOffsetHours": -5,
+    "latitude": 41.29957,
+    "longitude": -95.899717,
+    "elevationFeet": 984,
+    "classification": 2,
+    "active": true,
+    "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/OMA?codeType=fs",
+    "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/OMA?codeType=fs"
+   },
+   "departureDate": {
+    "dateLocal": "2015-05-07T09:12:00.000",
+    "dateUtc": "2015-05-07T14:12:00.000Z"
+   },
+   "arrivalDate": {
+    "dateLocal": "2015-05-07T10:47:00.000",
+    "dateUtc": "2015-05-07T15:47:00.000Z"
+   },
+   "status": "D",
+   "schedule": {
+    "flightType": "J",
+    "serviceClasses": "FJY",
+    "restrictions": "",
+    "uplines": [
+     {
+      "departureAirport": {
+       "fs": "SEA",
+       "iata": "SEA",
+       "icao": "KSEA",
+       "faa": "SEA",
+       "name": "Seattle-Tacoma International Airport",
+       "city": "Seattle",
+       "cityCode": "SEA",
+       "stateCode": "WA",
+       "postalCode": "98158",
+       "countryCode": "US",
+       "countryName": "United States",
+       "regionName": "North America",
+       "timeZoneRegionName": "America/Los_Angeles",
+       "weatherZone": "WAZ001",
+       "localTime": "2015-05-07T15:33:23.273",
+       "utcOffsetHours": -7,
+       "latitude": 47.443839,
+       "longitude": -122.301732,
+       "elevationFeet": 429,
+       "classification": 1,
+       "active": true,
+       "delayIndexUrl": "https://api.flightstats.com/flex/delayindex/rest/v1/json/airports/SEA?codeType=fs",
+       "weatherUrl": "https://api.flightstats.com/flex/weather/rest/v1/json/all/SEA?codeType=fs"
+      },
+      "flightId": 538139711
+     }
+    ]
+   },
+   "operationalTimes": {
+    "publishedDeparture": {
+     "dateLocal": "2015-05-07T09:12:00.000",
+     "dateUtc": "2015-05-07T14:12:00.000Z"
+    },
+    "publishedArrival": {
+     "dateLocal": "2015-05-07T10:47:00.000",
+     "dateUtc": "2015-05-07T15:47:00.000Z"
+    },
+    "scheduledGateDeparture": {
+     "dateLocal": "2015-05-07T09:12:00.000",
+     "dateUtc": "2015-05-07T14:12:00.000Z"
+    },
+    "estimatedGateDeparture": {
+     "dateLocal": "2015-05-07T09:18:00.000",
+     "dateUtc": "2015-05-07T14:18:00.000Z"
+    },
+    "actualGateDeparture": {
+     "dateLocal": "2015-05-07T09:18:00.000",
+     "dateUtc": "2015-05-07T14:18:00.000Z"
+    },
+    "flightPlanPlannedDeparture": {
+     "dateLocal": "2015-05-07T09:35:00.000",
+     "dateUtc": "2015-05-07T14:35:00.000Z"
+    },
+    "estimatedRunwayDeparture": {
+     "dateLocal": "2015-05-07T09:34:00.000",
+     "dateUtc": "2015-05-07T14:34:00.000Z"
+    },
+    "actualRunwayDeparture": {
+     "dateLocal": "2015-05-07T09:34:00.000",
+     "dateUtc": "2015-05-07T14:34:00.000Z"
+    },
+    "scheduledGateArrival": {
+     "dateLocal": "2015-05-07T10:47:00.000",
+     "dateUtc": "2015-05-07T15:47:00.000Z"
+    },
+    "estimatedGateArrival": {
+     "dateLocal": "2015-05-07T11:08:00.000",
+     "dateUtc": "2015-05-07T16:08:00.000Z"
+    },
+    "actualGateArrival": {
+     "dateLocal": "2015-05-07T11:08:00.000",
+     "dateUtc": "2015-05-07T16:08:00.000Z"
+    },
+    "flightPlanPlannedArrival": {
+     "dateLocal": "2015-05-07T10:23:00.000",
+     "dateUtc": "2015-05-07T15:23:00.000Z"
+    },
+    "estimatedRunwayArrival": {
+     "dateLocal": "2015-05-07T11:06:00.000",
+     "dateUtc": "2015-05-07T16:06:00.000Z"
+    },
+    "actualRunwayArrival": {
+     "dateLocal": "2015-05-07T11:06:00.000",
+     "dateUtc": "2015-05-07T16:06:00.000Z"
+    }
+   },
+   "codeshares": [
+    {
+     "carrier": {
+      "fs": "AC",
+      "iata": "AC",
+      "icao": "ACA",
+      "name": "Air Canada",
+      "phoneNumber": "1-800-247-2262",
+      "active": true
+     },
+     "flightNumber": "5589",
+     "relationship": "L"
+    }
+   ],
+   "delays": {
+    "departureGateDelayMinutes": 6,
+    "arrivalGateDelayMinutes": 21,
+    "arrivalRunwayDelayMinutes": 43
+   },
+   "flightDurations": {
+    "scheduledBlockMinutes": 95,
+    "blockMinutes": 110,
+    "scheduledAirMinutes": 48,
+    "airMinutes": 92,
+    "scheduledTaxiOutMinutes": 23,
+    "taxiOutMinutes": 16,
+    "scheduledTaxiInMinutes": 24,
+    "taxiInMinutes": 2
+   },
+   "airportResources": {
+    "departureTerminal": "1",
+    "departureGate": "C26",
+    "arrivalTerminal": "C",
+    "arrivalGate": "68"
+   },
+   "flightEquipment": {
+    "scheduledEquipment": {
+     "iata": "73G",
+     "name": "Boeing 737-700 Passenger",
+     "turboProp": false,
+     "jet": true,
+     "widebody": false,
+     "regional": false
+    },
+    "actualEquipment": {
+     "iata": "B737",
+     "name": "??",
+     "turboProp": false,
+     "jet": false,
+     "widebody": false,
+     "regional": false
+    },
+    "tailNumber": "N23707"
+   }
+  }
+ ]
+}

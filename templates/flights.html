@@ -77,7 +77,7 @@ to
                             <i class="mdi-device-airplanemode-on enroute"></i>
                           {% elif flight.status == 'D' %}
                             <!-- Status: Diverted -->
-                            <i class="mdi-communication-call-missed enroute"></i>
+                            <i class="mdi-communication-call-missed diverted"></i>
                           {% endif %}
                         {% endif %}
 
@@ -238,8 +238,34 @@ to
                               {% elif flight.status == 'D' %}
                                 <!-- Status: Diverted -->
 
+                                {% if 'operationalTimes' in flight %}
+                                    {% if 'actualGateArrival' in flight.operationalTimes %}
+                                        <i class="mdi-action-done landed"></i>&nbsp;
+                                        <span class="landed">Landed at
+                                          {{ flight.operationalTimes.actualGateArrival.dateLocal | as_time }}
+                                          {{ flight.operationalTimes.actualGateArrival.dateLocal | am_pm }}
+                                        </span><br>
+                                    {% endif %}
+                                {% endif %}
+                                
                                 <i class="mdi-communication-call-missed diverted"></i>&nbsp;
-                                <span class="diverted">Diverted</span> 
+                                <span class="diverted">
+                                  Diverted
+                                  {% if 'divertedAirport' in flight %}
+                                    to
+                                    {{ flight.divertedAirport.iata }}
+                                  {% endif %}
+                                </span>
+
+                                {% if 'delays' in flight %}
+                                    {% if 'departureGateDelayMinutes' in flight.delays %}
+                                        <br><i class="mdi-device-add-alarm delayed"></i>&nbsp;
+                                        <span class="delayed">
+                                            Delayed
+                                            {{ flight.delays.departureGateDelayMinutes }} min
+                                        </span>
+                                    {% endif %}
+                                {% endif %}
                               {% endif %}
 
                             {% endif %}
