@@ -245,10 +245,17 @@ to
                 <ul style="padding: 5px 0 0 4px;">
 
                 {% if 'flightDurations' in flight %}
-                    <li>
-                        Duration:
-                        {{ flight.flightDurations.scheduledBlockMinutes }} min
-                    </li>
+                    {% if 'scheduledBlockMinutes' in flight.flightDurations %}
+                        <li>
+                            Duration:
+                            {{ flight.flightDurations.scheduledBlockMinutes }} min
+                        </li>
+                    {% elif 'scheduledAirMinutes' in flight.flightDurations %}
+                        <li>
+                            Duration:
+                            {{ flight.flightDurations.scheduledAirMinutes }} min
+                        </li>
+                    {% endif %}
                 {% endif %}
 
                 {% if 'operationalTimes' in flight %}
