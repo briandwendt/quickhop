@@ -7,15 +7,18 @@
 
 {% block content %}
 
-<h5 class="center-align blue-text text-lighten-1" style="font-weight: 300;">
+<h4 class="center-align blue-text text-lighten-1"
+  style="font-weight: 300; font-size: 2.1rem; margin-bottom: 0;">
   {{ flights.request.departureAirport.airport.iata }}
   <span style="font-size: 75%;">&mdash;</span>
   {{ flights.request.arrivalAirport.airport.iata }}
+</h4>
+
+<h5 class="center-align" style="font-size: 1.4rem; margin-top: 0;">
+  {{ flights.request.date.interpreted | as_date }}
 </h5>
 
-<h6 class="center-align">{{ flights.request.date.interpreted | as_date }}</h6>
-
-<p class="center-align" style="font-size: 0.8rem;">
+<p class="center-align" style="font-size: 0.9rem;">
   {{ flights.request.departureAirport.airport.city }},
   {% if 'stateCode' in flights.request.departureAirport.airport %}
     {{ flights.request.departureAirport.airport.stateCode }}
@@ -52,7 +55,7 @@
                 {% endif %}
               {% elif flight.status == 'C' %}
                 <!-- Status: Canceled -->
-                <i class="mdi-device-airplanemode-off canceled"></i>
+                <i class="mdi-communication-dnd-on canceled"></i>
               {% elif flight.status == 'L' %}
                 <!-- Status: Landed -->
                 <i class="mdi-action-done landed"></i>
@@ -142,7 +145,7 @@
 
                   {% elif flight.status == 'C' %}
                     <!-- Status: Canceled -->
-                    <i class="mdi-device-airplanemode-off canceled"></i>&nbsp;
+                    <i class="mdi-communication-dnd-on canceled"></i>&nbsp;
                     <span class="canceled">Canceled</span> 
 
                   {% elif flight.status == 'L' %}

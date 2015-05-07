@@ -41,9 +41,7 @@ app.config['SECRET_KEY'] = CSRF_SECRET_KEY
 @app.route('/', methods=('GET', 'POST'))
 def search():
     """
-
     The main flights search page.
-
     """
     # Forms are in forms.py
     form = FindFlights()
@@ -83,6 +81,9 @@ def page_not_found(e):
 
 @app.route('/flights/<origin>/<destination>/<year>/<month>/<day>/')
 def flights(origin, destination, year, month, day):
+    """
+    The flights list page.
+    """
     
     # FlightStats API: "Flight Status by Route"
     fs_url = 'https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/'
