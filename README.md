@@ -22,13 +22,13 @@ for getting things to work on Google App Engine.
 Next you'll need to manually create the `secret_keys.py` file, which should look something
 like the following:
 
-   # CSRF and Session keys
-   CSRF_SECRET_KEY = 'super secret jibberish'
-   SESSION_KEY = 'even secreter jibberish'
-
-   # FlightStats API
-   FS_APP_ID = 'Your FlightStats App ID'
-   FS_APP_KEY = 'Your FlightStats App Key'
+    # CSRF and Session keys
+    CSRF_SECRET_KEY = 'super secret jibberish'
+    SESSION_KEY = 'even secreter jibberish'
+    
+    # FlightStats API
+    FS_APP_ID = 'Your FlightStats App ID'
+    FS_APP_KEY = 'Your FlightStats App Key'
 
 Finally you'll need to download and install the [Google App Engine SDK for Python](https://cloud.google.com/appengine/downloads), after which you can run
 
