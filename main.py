@@ -1,7 +1,7 @@
 # Flask microframework
 from flask import Flask, request, redirect, render_template, url_for, flash
-from forms import FindFlights
-from secret_keys import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY
+from forms import FindFlights, Feedback
+from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY
 
 # HTTP Requests and datetime utilities
 import requests
@@ -57,6 +57,18 @@ def search():
 
     # Render the flights search form
     return render_template('search.html', form=form)
+
+
+@app.route('/feedback', methods=['GET', 'POST'])
+def feedback():
+  form = Feedback()
+ 
+  if request.method == 'POST' and form.validate_on_submit():
+    flash('Thanks for your feedback!', 'success-message')
+    return redirect(url_for('search'))
+ 
+  elif request.method == 'GET':
+    return render_template('feedback.html', form=form)
 
 
 @app.route('/about')

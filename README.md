@@ -21,7 +21,7 @@ Download or clone this repo, then navigate to the `quickhop-mobile` directory an
 This will install all required dependencies into the `lib` subdirectory, a necessary step
 for getting things to work on Google App Engine.
 
-Next you'll need to manually create the `secret_keys.py` file, which should look something
+Next you'll need to manually create the `config.py` file, which should look something
 like the following:
 
     # CSRF key for Flask-WTF

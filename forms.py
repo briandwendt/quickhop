@@ -1,17 +1,17 @@
 from flask_wtf import Form
-from wtforms import StringField, SelectField
-from wtforms.validators import Length
+from wtforms import StringField, SelectField, TextAreaField, SubmitField
+from wtforms.validators import Length, Required, Email
 from datetime import date, time, datetime
 
 class FindFlights(Form):
 
     origin = StringField('Departure Airport', validators=[
         Length(min=3, max=3, message=(u'3-letter IATA code'))
-    ])
+        ])
 
     destination = StringField('Arrival Airport', validators=[
         Length(min=3, max=3, message=(u'3-letter IATA code'))
-    ])
+        ])
 
     year = SelectField('Year', default=str(datetime.now().year),
         choices=[(str(datetime.now().year-1), str(datetime.now().year-1)),
@@ -29,3 +29,15 @@ class FindFlights(Form):
                  ("17", 17),("18", 18),("19", 19),("20", 20),("21", 21),("22", 22),("23", 23),
                  ("24", 24),("25", 25),("26", 26),("27", 27),("28", 28),("29", 29),("30", 30),
                  ("31", 31)])
+
+
+class Feedback(Form):
+    name = TextAreaField('Name')
+    email = TextAreaField('Email', validators=[
+        Required(),
+        Email()
+        ])
+    message = TextAreaField('Message', validators=[
+        Required()
+        ])
+    submit = SubmitField('Send Feedback')    
