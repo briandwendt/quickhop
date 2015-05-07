@@ -9,6 +9,9 @@
     html {
       font-size: 15.5px;
     }
+    .search-flights {
+      padding: 40px 50px 60px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
