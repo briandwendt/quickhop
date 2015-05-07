@@ -1,9 +1,9 @@
 ## QuickHop - Find Flights Fast
 
 Quickhop is a fast and lightweight airline flights search tool designed to
-meet the needs of non-revenue travelers and commuters.
+meet the needs of non-revenue travelers and airline commuters.
 
-QuickHop is live at [http://quickhop.info/](http://quickhop.info/).
+QuickHop is live at [QuickHop.info](http://quickhop.info/).
 
 #### Key Components
 
@@ -18,15 +18,14 @@ Download or clone this repo, then navigate to the `quickhop-mobile` directory an
 
     pip install -r requirements.txt -t lib/
 
-This will install all required dependencies into the `lib` subdirectory, a requirement
+This will install all required dependencies into the `lib` subdirectory, a necessary step
 for getting things to work on Google App Engine.
 
 Next you'll need to manually create the `secret_keys.py` file, which should look something
 like the following:
 
-    # CSRF and Session keys
+    # CSRF key for Flask-WTF
     CSRF_SECRET_KEY = 'super secret jibberish'
-    SESSION_KEY = 'even secreter jibberish'
     
     # FlightStats API
     FS_APP_ID = 'Your FlightStats App ID'
