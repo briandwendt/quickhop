@@ -184,6 +184,7 @@ to
                                   {% if 'scheduledEquipment' in flight.flightEquipment %}
                                     {{ flight.flightEquipment.scheduledEquipment.name
                                           | replace("(winglets)", "")
+                                          | replace("(sharklets)", "")
                                           | replace("Passenger", "")
                                           | replace("and Challenger 890", "")
                                           | replace("and Challenger 870", "")

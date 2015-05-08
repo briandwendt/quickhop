@@ -49,11 +49,13 @@ def search():
     # If the completed form validates, show the flights list
     if request.method == 'POST' and form.validate_on_submit():
         return redirect(url_for('flights',
-            origin = request.form['origin'].upper(),
-            destination = request.form['destination'].upper(),
+            origin = request.form['origin'].upper().strip(),
+            destination = request.form['destination'].upper().strip(),
             year = request.form['year'],
             month = request.form['month'],
             day = request.form['day']))
+    elif request.method == 'POST':
+        flash('Please correct the following errors:')
 
     # Render the flights search form
     return render_template('search.html', form=form)
@@ -95,8 +97,7 @@ def page_not_found(e):
 def flights(origin, destination, year, month, day):
     """
     The flights list page.
-    """
-    
+    """    
     # FlightStats API: "Flight Status by Route"
     fs_url = 'https://api.flightstats.com/flex/flightstatus/rest/v2/json/route/status/'
     fs_url = fs_url + '{orig}/{dest}/dep/{year}/{month}/{day}'\

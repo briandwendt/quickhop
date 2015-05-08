@@ -3,15 +3,20 @@ from wtforms import StringField, SelectField, TextAreaField, SubmitField
 from wtforms.validators import Length, Required, Email
 from datetime import date, time, datetime
 
+def strip_whitespace(s):
+    if isinstance(s, basestring):
+        s = s.strip()
+    return s 
+    
 class FindFlights(Form):
 
     origin = StringField('Departure Airport', validators=[
         Length(min=3, max=3, message=(u'3-letter IATA code'))
-        ])
+        ], filters=[strip_whitespace])
 
     destination = StringField('Arrival Airport', validators=[
         Length(min=3, max=3, message=(u'3-letter IATA code'))
-        ])
+        ], filters=[strip_whitespace])
 
     year = SelectField('Year', default=str(datetime.now().year),
         choices=[(str(datetime.now().year-1), str(datetime.now().year-1)),
@@ -40,4 +45,4 @@ class Feedback(Form):
     message = TextAreaField('Message', validators=[
         Required()
         ])
-    submit = SubmitField('Send Feedback')    
+    submit = SubmitField('Send Feedback')
