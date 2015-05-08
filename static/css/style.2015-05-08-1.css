@@ -98,13 +98,14 @@ ul.flashes li {
 
 .flight {
   display: inline-block;
+  vertical-align: top; /* fixed 'dropped' flight times bug */
 }
 .flight.dep_time {
   font-size: 1.8rem;
   font-weight: 400;
   color: #42a5f5;
   text-align: right;
-  width: 95px;
+  width: 100px;
 }
 @media only screen and (min-width: 992px) {
     .flight.dep_time {
@@ -116,7 +117,7 @@ ul.flashes li {
   font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
-  width: 50%;
+  width: 55%;
 }
 .canceled {
   color: red;

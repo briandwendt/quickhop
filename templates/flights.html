@@ -12,7 +12,9 @@ to
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row">
-        <div class="col s12 m10 offset-m1">
+        <div class="col s12 m8 offset-m2">
+
+            <!-- City Pair (IATA codes) -->
 
             <h4 class="center-align blue-text text-lighten-1"
               style="font-weight: 300; font-size: 2.1rem; margin-bottom: 0;">
@@ -21,9 +23,13 @@ to
               {{ flights.request.arrivalAirport.airport.iata }}
             </h4>
 
+            <!-- Date -->
+
             <h5 class="center-align" style="font-size: 1.4rem; margin-top: 0;">
               {{ flights.request.date.interpreted | as_date }}
             </h5>
+
+            <!-- Number of flights listed -->
 
             <h6 style="margin-left: 1.6rem; font-size: 0.8rem;">
               {{ count }} {% if count != 1 %}flights{% else %}flight{% endif %} found
@@ -40,6 +46,12 @@ to
                       and not '1I' in flight.carrier.iata
                       and not 'CK' in flight.carrier.iata
                       and not '5X' in flight.carrier.iata %}
+
+      {# #############################################################################
+
+         =======================  Flight Data Header =================================
+
+         ############################################################################# #}
 
                     <li>
                       <div class="collapsible-header active">
@@ -68,6 +80,8 @@ to
                           {% endif %}
                         {% endif %}
 
+                        <!-- Departure Time -->
+
                         <span class="flight dep_time">
                           {% if 'publishedDeparture' in flight.operationalTimes %}
                             {{ flight.operationalTimes.publishedDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.publishedDeparture.dateLocal | am_pm }}</span>
@@ -77,7 +91,10 @@ to
                             {{ flight.operationalTimes.flightPlanPlannedDeparture.dateLocal | as_time }}<span style="font-size: 40%;"> {{ flight.operationalTimes.flightPlanPlannedDeparture.dateLocal | am_pm }}</span>
                           {% endif %}
                         </span>
-                        <span class="flight number">
+
+                        <!-- Flight Number (IATA codes for codeshare & operating carrier) -->
+
+                        <span class="flight number truncate">
                           {% if 'codeshares' in flight %}
                             {% for codeshare in flight.codeshares %}
                               {% if 'X' in codeshare.relationship or 'S' in codeshare.relationship %}
@@ -86,27 +103,25 @@ to
                             {% endfor %}
                           {% endif %}
                           {{ flight.carrier.iata }}
-                          {{ flight.flightNumber }}                           
+                          {{ flight.flightNumber }}                       
                         </span>
                       </div>
 
+      {# #############################################################################
 
-            {# ################################################################################
+         ======================= Collapsible Flight Data Card ========================
 
-
-             ========================= Collapsible Flight Data Card ===========================
-
-
-            ################################################################################ #}
-
+         ############################################################################# #}
 
                       <div class="collapsible-body">
 
-                        <!-- Flight Number -->
+                        <!-- Flight Number (full carrier name) -->
 
                         <h5 class="center" style="font-size: 1.2rem; font-weight: 500; margin-bottom: 0;">
                           {{ flight.carrier.name }} {{ flight.flightNumber }}
                         </h5>
+
+                        <!-- City Pair (full location names) -->
 
                         <p class="center-align" style="font-size: 0.9rem; padding: 0; margin-bottom: 16px;">
                           {{ flights.request.departureAirport.airport.city }},
@@ -144,7 +159,7 @@ to
                                 {% endif %}
                             {% endif %}
 
-                            <ul style="padding: 12px 0 0 0;">
+                            <ul style="padding: 12px 0 0 0; font-size: 0.8rem;">
 
                               <!-- Flight Duration -->
 
