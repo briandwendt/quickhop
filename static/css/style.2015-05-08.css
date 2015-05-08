@@ -122,19 +122,19 @@ ul.flashes li {
   color: red;
 }
 .delayed {
-  color: #f57c00; /* orange darken-2 */
+  color: #f57c00;
 }
 .scheduled {
   color: green;
 }
 .landed {
-  color: #aaa;
+  color: #546e7a;
 }
 .enroute {
   color: #0277bd;
 }
 .diverted {
-  color: #d500f9; /* blue-grey darken-3 */
+  color: #d500f9;
 }
 
 #origin, #destination {
