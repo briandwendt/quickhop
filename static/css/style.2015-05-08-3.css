@@ -65,6 +65,7 @@ ul.flashes li {
 .collapsible-header {
   height: 4rem;
   line-height: 4rem;
+  overflow: hidden; /* hides flight number on tiny screens */
 }
 
 .collapsible-header i {
@@ -107,11 +108,6 @@ ul.flashes li {
   text-align: right;
   width: 95px;
 }
-@media only screen and (min-width: 992px) {
-    .flight.dep_time {
-      font-weight: 300;
-    }
-}
 .flight.number {
   color: #424242;
   font-size: 1.2rem;
@@ -119,6 +115,32 @@ ul.flashes li {
   text-align: center;
   width: 50%;
 }
+
+/* Fixing layout bugs on small screens - iPhone 5 and smaller */
+@media only screen and (min-width: 992px) {
+    .flight.dep_time {
+      font-weight: 300;
+    }
+}
+@media only screen and (max-width: 320px) {
+  .flight.dep_time {
+    font-size: 1.4rem;
+    width: 70px;
+  }
+  .flight.number {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 240px) {
+  .flight.dep_time {
+    font-size: 1.2rem;
+    width: 60px;
+  }
+  .flight.number {
+    font-size: 0.8rem;
+  }
+}
+
 .canceled {
   color: red;
 }
