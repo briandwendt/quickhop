@@ -85,6 +85,10 @@ ul.flashes li.success {
   margin-left: 0.2rem;
 }
 
+.collapsible-body {
+  background-color: #fff;
+}
+
 .input-field label {
   top: -0.8rem;
   -webkit-transition: none;

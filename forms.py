@@ -29,15 +29,15 @@ class FindFlights(Form):
                  (str(today.year+1), str(today.year+1))])
 
     # List only this month, +/- 1 month
-    months = [(today.month-1, (today-timedelta(weeks=4)).strftime("%b")),
-              (today.month, today.strftime("%b")),
-              (today.month+1, (today+timedelta(weeks=4)).strftime("%b"))]
+    months = [(str(today.month-1), (today-timedelta(weeks=4)).strftime("%b")),
+              (str(today.month), today.strftime("%b")),
+              (str(today.month+1), (today+timedelta(weeks=4)).strftime("%b"))]
 
     month = SelectField('Month', default=today.month, choices=months)
 
     # List only today +3/-7 days (FlightStats search limitation)
     days = [( (today+timedelta(days=i)).strftime('%d'),
-           (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,4)]
+           (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,3)]
 
     day = SelectField('Day', default=today.strftime("%d"), choices=days)
 
