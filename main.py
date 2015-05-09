@@ -12,6 +12,9 @@ import dateutil.parser
 # Create a new Flask app
 app = Flask(__name__)
 
+# Setup Flask-Mail
+mail = Mail(app)
+
 # Date & time filters for Jinja
 @app.template_filter()
 def as_time(value, format='%l:%M'):

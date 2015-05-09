@@ -20,6 +20,10 @@
     }
 }
 
+.parallax-container {
+  height: 510px;
+}
+
 .container {
   padding: 0;
 }
@@ -220,7 +224,7 @@ ul.errors li {
   input[type=text],
   textarea.materialize-textarea,
   .select-wrapper input.select-dropdown {
-    height: 3.4rem;
-    font-size: 1.4rem;
+    height: 3.3rem;
+    font-size: 1.3rem;
   }
 }

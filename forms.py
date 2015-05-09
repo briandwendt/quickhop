@@ -1,7 +1,7 @@
 from flask_wtf import Form
 from wtforms import StringField, SelectField, TextAreaField
 from wtforms.validators import Length, Required, Email
-from datetime import date, time, datetime
+from datetime import date, time, datetime, timedelta
 
 def strip_whitespace(s):
     if isinstance(s, basestring):
@@ -18,25 +18,37 @@ class FindFlights(Form):
         Length(min=3, max=3, message=(u'3-letter IATA code'))
         ], filters=[strip_whitespace])
 
-    year = SelectField('Year', default=str(datetime.now().year),
-        choices=[(str(datetime.now().year-1), str(datetime.now().year-1)),
-                 (str(datetime.now().year+0), str(datetime.now().year+0)),
-                 (str(datetime.now().year+1), str(datetime.now().year+1))])
+    # This is the SERVER date (in UTC), maybe not quite right to use this.
+    # We really need the LOCALE from of the user's device...
+    today = datetime.today()
 
-    month = SelectField('Month', default=datetime.now().strftime("%m"),
-        choices=[("01", "JAN"),("02", "FEB"),("03", "MAR"),("04", "APR"),("05", "MAY"),
-                 ("06", "JUN"),("07", "JUL"),("08", "AUG"),("09", "SEP"),("10", "OCT"),
-                 ("11", "NOV"),("12", "DEC")])
+    # List only this year, +/- 1 month
+    year = SelectField('Year', default=str(today.year),
+        choices=[(str(today.year-1), str(today.year-1)),
+                 (str(today.year+0), str(today.year+0)),
+                 (str(today.year+1), str(today.year+1))])
 
-    day = SelectField('Day', default=datetime.now().strftime("%d"),
-        choices=[("01", 1),("02", 2),("03", 3),("04", 4),("05", 5),("06", 6),("07", 7),("08", 8),("09", 9),
-                 ("10", 10),("11", 11),("12", 12),("13", 13),("14", 14),("15", 15),("16", 16),
-                 ("17", 17),("18", 18),("19", 19),("20", 20),("21", 21),("22", 22),("23", 23),
-                 ("24", 24),("25", 25),("26", 26),("27", 27),("28", 28),("29", 29),("30", 30),
-                 ("31", 31)])
+    # List only this month, +/- 1 month
+    months = [(today.month-1, (today-timedelta(weeks=4)).strftime("%b")),
+              (today.month, today.strftime("%b")),
+              (today.month+1, (today+timedelta(weeks=4)).strftime("%b"))]
+
+    month = SelectField('Month', default=today.month, choices=months)
+
+    # List only today +3/-7 days (FlightStats search limitation)
+    days = [( (today+timedelta(days=i)).strftime('%d'),
+           (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,4)]
+
+    day = SelectField('Day', default=today.strftime("%d"), choices=days)
 
 
 class Contact(Form):
+
+    # 
+    # TODO:
+    #
+    # We need a recaptcha or some kind of anti-bot-spam thing here...
+    #
 
     name = StringField('Name', validators=[
         Length(max=50), Required(message=u'A name. Any name will do.') ])
