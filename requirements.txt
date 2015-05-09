@@ -6,11 +6,20 @@
 #    $ pip install -r requirements.txt -t lib/
 #
 #
-# This will create and populate the `lib` subdirectory.
-# The `lib` directory is added to `sys.path` by `appengine_config.py`.
+# This will create and populate the 'lib' subdirectory.
+# The 'lib' directory is added to 'sys.path' by 'appengine_config.py'.
 #
 
 Flask==0.10
+Flask-Mail==0.9.1
 Flask-WTF==0.11
+Jinja2==2.7.3
+MarkupSafe==0.23
+WTForms==2.0.2
+Werkzeug==0.10.4
+blinker==1.3
+itsdangerous==0.24
+python-dateutil==2.4.2
 requests==2.3.0
-python-dateutil
+six==1.9.0
+wsgiref==0.1.2
