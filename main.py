@@ -1,5 +1,6 @@
 # Flask microframework
 from flask import Flask, request, redirect, render_template, url_for, flash
+from flask_mail import Mail
 from forms import FindFlights, Contact
 from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY
 

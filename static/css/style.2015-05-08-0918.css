@@ -39,6 +39,7 @@ h1.header {
   font-size: 1.5rem;
   letter-spacing: -0.8px;
   line-height: 0;
+  margin-bottom: 3rem;
 }
 @media only screen and (min-width: 992px) {
     h1.header {
@@ -213,4 +214,13 @@ ul.errors li {
 /* icon prefix focus color */
 .input-field .prefix.active {
  color: #3e3e3e;
+}
+
+@media only screen and (min-width: 992px) {
+  input[type=text],
+  textarea.materialize-textarea,
+  .select-wrapper input.select-dropdown {
+    height: 3.4rem;
+    font-size: 1.4rem;
+  }
 }

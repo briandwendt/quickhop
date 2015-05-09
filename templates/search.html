@@ -3,7 +3,16 @@
 {% block title %}QuickHop - Find flights fast{% endblock %}
 
 {% block content %}
-  <div class="section no-pad-bot">
+
+<!-- Begin Parallax Image Container -->
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="{{ url_for('static', filename='img/venice-2.jpg') }}">
+  </div>
+
+  <!-- Search Form Section -->
+  <div class="section">
     <div class="container">
       <div class="row">
         <div class="col s12 m10 offset-m1">
@@ -11,12 +20,15 @@
             <div class="card-panel search-flights">
 
               <h1 class="header center blue-text text-lighten-1">
-                <i class="mdi-device-airplanemode-on"></i> Find Flights Fast
-              </h1><br>
+                <i class="mdi-device-airplanemode-on"></i>
+                <span>Find</span>
+                <span>Flights</span>
+                <span style="color: #f04c4f;">Fast</span>
+              </h1>
 
               {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
-                  <ul class="flashes center">
+                  <ul class="flashes center" style="margin-top: -0.8rem;">
                   {% for category, message in messages %}
                     <li class="{{ category }}">{{ message }}</li>
                   {% endfor %}
@@ -30,7 +42,7 @@
 
                 <div class="row">
                   <div class="input-field col s6">
-                    {{ form.origin(class_="validate", placeholder="SFO") }}
+                    {{ form.origin(class_="validate", placeholder="CDG") }}
                     {{ form.origin.label(class_="truncate") }}
                     {% if form.origin.errors %}
                       <ul class="errors">
@@ -41,7 +53,7 @@
                     {% endif %}
                   </div>
                   <div class="input-field col s6">
-                    {{ form.destination(class_="validate", placeholder="JFK") }}
+                    {{ form.destination(class_="validate", placeholder="VCE") }}
                     {{ form.destination.label(class_="truncate") }}
                     {% if form.destination.errors %}
                       <ul class="errors">
@@ -89,7 +101,8 @@
                 </div>
 
                 <div class="center-align">
-                  <button class="btn-large waves-effect waves-light blue lighten-1"type="submit">
+                  <button class="btn-large waves-effect waves-light"
+                    style="background-color: #f04c4f; min-width: 40%" type="submit">
                     <i class="mdi-action-search left"></i>
                     Find Flights
                   </button>
@@ -102,16 +115,19 @@
       </div>
     </div>
   </div>
+  <!-- End Search Form Section -->
+</div>
+<!-- End Parallax Image Container -->
+
+  <!--   Icon Section   -->
 
   <div class="container hide-on-small-only">
-    <div class="section no-pad-top">
-
-      <!--   Icon Section   -->
+    <div class="section">
       <div class="row">
         <div class="col m6 l4">
           <div class="icon-block">
-            <h2 class="center orange-text"><i class="mdi-image-flash-on"></i></h2>
-            <h5 class="center">Lightning quick</h5>
+            <h2 class="center orange-text text-lighten-1"><i class="mdi-image-flash-on"></i></h2>
+            <h5 class="center">Move quickly</h5>
 
             <p class="light">
               QuickHop is quick. Real quick. Because when you're running through
@@ -123,8 +139,10 @@
 
         <div class="col m6 l4">
           <div class="icon-block">
-            <h2 class="center blue-grey-text"><i class="mdi-hardware-phone-android"></i></h2>
-            <h5 class="center">Mobile first</h5>
+            <h2 class="center" style="color: #57a358">
+              <i class="mdi-hardware-phone-android"></i>
+            </h2>
+            <h5 class="center">Think mobile</h5>
 
             <p class="light">
             QuickHop is designed to be used on a mobile device, with one hand.
@@ -136,8 +154,10 @@
 
         <div class="col l4 hide-on-med-and-down">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-action-wallet-travel"></i></h2>
-            <h5 class="center">Ride to live</h5>
+            <h2 class="center" style="color: #f04c4f;">
+              <i class="mdi-action-wallet-travel"></i>
+            </h2>
+            <h5 class="center">Keep going</h5>
 
             <p class="light">
             QuickHop is made for non-revenue travelers, passriders and
@@ -149,8 +169,8 @@
       </div>
 
     </div>
-    <br><br>
-    <div class="section no-pad-top"></div>
+
   </div>
+  <!-- End Icon Section -->
 
 {% endblock %}

@@ -1,9 +1,11 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
 
     $('select').material_select();
+
+    $('.button-collapse').sideNav();
 
     $('.collapsible').collapsible({
       accordion : false 
