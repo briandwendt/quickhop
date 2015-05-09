@@ -1,6 +1,7 @@
-## QuickHop - Find Flights Fast
+## QuickHop
+#### Find flights fast
 
-Quickhop is a fast and lightweight airline flights search tool designed to
+QuickHop is a fast and lightweight airline flights search tool designed to
 meet the needs of non-revenue travelers and airline commuters.
 
 QuickHop is live at [QuickHop.info](http://quickhop.info/).
