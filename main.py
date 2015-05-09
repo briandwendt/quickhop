@@ -1,6 +1,6 @@
 # Flask microframework
 from flask import Flask, request, redirect, render_template, url_for, flash
-from forms import FindFlights, Feedback
+from forms import FindFlights, Contact
 from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY
 
 # HTTP Requests and datetime utilities
@@ -61,16 +61,17 @@ def search():
     return render_template('search.html', form=form)
 
 
-@app.route('/feedback', methods=['GET', 'POST'])
-def feedback():
-  form = Feedback()
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+  form = Contact()
  
   if request.method == 'POST' and form.validate_on_submit():
-    flash('Thanks for your feedback!', 'success-message')
+    # Something about actually SENDING the message
+    # somewhere would be good here...
+    flash('Your message has been sent!', 'success')
     return redirect(url_for('search'))
  
-  elif request.method == 'GET':
-    return render_template('feedback.html', form=form)
+  return render_template('contact.html', form=form)
 
 
 @app.route('/about')
@@ -129,7 +130,7 @@ def flights(origin, destination, year, month, day):
 
     # If there are errors, return to the search form
     if 'error' in flights:
-        flash(flights['error']['errorMessage'])
+        flash(flights['error']['errorMessage'], 'error')
         return redirect(url_for('search'))
 
     # Count the flights
@@ -138,11 +139,11 @@ def flights(origin, destination, year, month, day):
         for flight in flights['flightStatuses']:
             count += 1
     else:
-        flash('No flights found for {0} to {1}.'.format(origin, destination))
+        flash('No flights found for {0} to {1}.'.format(origin, destination), 'error')
         return redirect(url_for('search'))
 
     if count == 0:
-        flash('No flights found for {0} to {1}.'.format(origin, destination))
+        flash('No flights found for {0} to {1}.'.format(origin, destination), 'error')
         return redirect(url_for('search'))
 
     # Render the flights list page

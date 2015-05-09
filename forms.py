@@ -1,5 +1,5 @@
 from flask_wtf import Form
-from wtforms import StringField, SelectField, TextAreaField, SubmitField
+from wtforms import StringField, SelectField, TextAreaField
 from wtforms.validators import Length, Required, Email
 from datetime import date, time, datetime
 
@@ -7,7 +7,7 @@ def strip_whitespace(s):
     if isinstance(s, basestring):
         s = s.strip()
     return s 
-    
+
 class FindFlights(Form):
 
     origin = StringField('Departure Airport', validators=[
@@ -36,13 +36,10 @@ class FindFlights(Form):
                  ("31", 31)])
 
 
-class Feedback(Form):
-    name = TextAreaField('Name')
-    email = TextAreaField('Email', validators=[
-        Required(),
-        Email()
-        ])
-    message = TextAreaField('Message', validators=[
-        Required()
-        ])
-    submit = SubmitField('Send Feedback')
+class Contact(Form):
+    name = StringField('Name', validators=[
+        Length(max=50), Required(message=u'A name. Any name will do.') ])
+    email = StringField('Email',
+        validators=[ Email(message=u'Please provide valid email address.') ])
+    message = TextAreaField('Comments',
+        validators=[ Required(message=u'You really should say SOMEthing.') ])

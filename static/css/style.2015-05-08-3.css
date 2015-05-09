@@ -61,6 +61,10 @@ ul.flashes li {
   color: red;
   font-size: 0.85rem;
 }
+ul.flashes li.success {
+  color: #fb8c00;
+  font-size: 1rem;
+}
 
 .collapsible-header {
   height: 4rem;

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %} Contact | QuickHop {% endblock %}
+
+{% block content %}
+
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m10 offset-m1">
+
+            <h5 class="header blue-text text-lighten-1">
+                Send your feedback
+            </h5><br>
+
+            <form method="POST">
+
+                {{ form.csrf_token }}
+
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <i class="mdi-action-account-circle prefix"></i>
+                    {{ form.name }}
+                    {{ form.name.label }}
+                    {% if form.name.errors %}
+                      <ul class="errors" style="margin: 0 0 20px 50px;">
+                      {% for error in form.name.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <i class="mdi-communication-email prefix"></i>
+                    {{ form.email }}
+                    {{ form.email.label }}
+                    {% if form.email.errors %}
+                      <ul class="errors" style="margin: 0 0 20px 50px;">
+                      {% for error in form.email.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="mdi-communication-comment prefix"></i>
+                    {{ form.message(class_="materialize-textarea") }}
+                    {{ form.message.label }}
+                    {% if form.message.errors %}
+                      <ul class="errors" style="margin: 0 0 20px 50px;">
+                      {% for error in form.message.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="right">
+                  <button class="btn waves-effect waves-light blue lighten-1"type="submit">
+                    <i class="mdi-content-send right"></i>
+                    Send
+                  </button>
+                </div>
+
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

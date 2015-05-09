@@ -14,14 +14,14 @@
                 <i class="mdi-device-airplanemode-on"></i> Find Flights Fast
               </h1><br>
 
-              {% with messages = get_flashed_messages() %}
+              {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
-                  <ul class='flashes center'>
-                  {% for message in messages %}
-                    <li>{{ message }}</li>
+                  <ul class="flashes center">
+                  {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
                   {% endfor %}
                   </ul>
-                  {% endif %}
+                {% endif %}
               {% endwith %}
 
               <form method="POST">
@@ -123,7 +123,7 @@
 
         <div class="col m6 l4">
           <div class="icon-block">
-            <h2 class="center blue-grey-text"><i class="mdi-device-devices"></i></h2>
+            <h2 class="center blue-grey-text"><i class="mdi-hardware-phone-android"></i></h2>
             <h5 class="center">Mobile first</h5>
 
             <p class="light">
@@ -137,7 +137,7 @@
         <div class="col l4 hide-on-med-and-down">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="mdi-action-wallet-travel"></i></h2>
-            <h5 class="center">Built for non-rev</h5>
+            <h5 class="center">Ride to live</h5>
 
             <p class="light">
             QuickHop is made for non-revenue travelers, passriders and
