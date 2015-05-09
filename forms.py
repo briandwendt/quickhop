@@ -37,9 +37,11 @@ class FindFlights(Form):
 
 
 class Contact(Form):
+
     name = StringField('Name', validators=[
         Length(max=50), Required(message=u'A name. Any name will do.') ])
     email = StringField('Email',
-        validators=[ Email(message=u'Please provide valid email address.') ])
+        validators=[ Email(message=u'Please provide a valid email address.') ])
     message = TextAreaField('Comments',
         validators=[ Required(message=u'You really should say SOMEthing.') ])
+
