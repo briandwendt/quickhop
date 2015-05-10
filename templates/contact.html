@@ -9,9 +9,19 @@
       <div class="row">
         <div class="col s12 m10 offset-m1">
 
-            <h5 class="header blue-text text-lighten-1">
-                Send your feedback
+            <h5 class="header" style="color: #f04c4f;">
+                Talk Hard
             </h5><br>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                <ul class="flashes center" style="margin-top: -0.8rem;">
+                {% for category, message in messages %}
+                  <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
 
             <form method="POST">
 
@@ -19,11 +29,10 @@
 
                 <div class="row">
                   <div class="input-field col s12 m6">
-                    <i class="mdi-action-account-circle prefix"></i>
                     {{ form.name }}
                     {{ form.name.label }}
                     {% if form.name.errors %}
-                      <ul class="errors" style="margin: 0 0 20px 50px;">
+                      <ul class="errors">
                       {% for error in form.name.errors %}
                         <li>{{ error }}</li>
                       {% endfor %}
@@ -31,11 +40,10 @@
                     {% endif %}
                   </div>
                   <div class="input-field col s12 m6">
-                    <i class="mdi-communication-email prefix"></i>
                     {{ form.email }}
                     {{ form.email.label }}
                     {% if form.email.errors %}
-                      <ul class="errors" style="margin: 0 0 20px 50px;">
+                      <ul class="errors">
                       {% for error in form.email.errors %}
                         <li>{{ error }}</li>
                       {% endfor %}
@@ -46,11 +54,10 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <i class="mdi-communication-comment prefix"></i>
                     {{ form.message(class_="materialize-textarea") }}
                     {{ form.message.label }}
                     {% if form.message.errors %}
-                      <ul class="errors" style="margin: 0 0 20px 50px;">
+                      <ul class="errors">
                       {% for error in form.message.errors %}
                         <li>{{ error }}</li>
                       {% endfor %}
@@ -59,8 +66,20 @@
                   </div>
                 </div>
 
-                <div class="right">
-                  <button class="btn waves-effect waves-light blue lighten-1"type="submit">
+                <div class="row" style="padding-left: 10px;">
+                  {{ form.recaptcha }}
+                  {% if form.recaptcha.errors %}
+                      <ul class="errors" style="margin-top: 20px;">
+                      {% for error in form.recaptcha.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                      </ul>
+                    {% endif %}
+                </div>
+
+                <div class="center">
+                  <button class="btn-large waves-effect waves-light"
+                    style="background-color: #f04c4f; min-width: 30%;" type="submit">
                     <i class="mdi-content-send right"></i>
                     Send
                   </button>

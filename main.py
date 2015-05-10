@@ -1,19 +1,19 @@
 # Flask microframework
 from flask import Flask, request, redirect, render_template, url_for, flash
-from flask_mail import Mail
 from forms import FindFlights, Contact
-from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY
+from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY, \
+                   ADMIN_EMAIL, RECAPTCHA_PUBLIC_KEY, RECAPTCHA_PRIVATE_KEY
+
+# Google AppEngine Mail Python API
+from google.appengine.api import mail
 
 # HTTP Requests and datetime utilities
 import requests
-from datetime import datetime
 import dateutil.parser
+from datetime import datetime
 
 # Create a new Flask app
 app = Flask(__name__)
-
-# Setup Flask-Mail
-mail = Mail(app)
 
 # Date & time filters for Jinja
 @app.template_filter()
@@ -39,6 +39,8 @@ app.jinja_env.filters['am_pm'] = am_pm
 app.config['DEBUG'] = True
 app.config['CSRF_ENABLED'] = True
 app.config['SECRET_KEY'] = CSRF_SECRET_KEY
+app.config['RECAPTCHA_PUBLIC_KEY'] = RECAPTCHA_PUBLIC_KEY
+app.config['RECAPTCHA_PRIVATE_KEY'] = RECAPTCHA_PRIVATE_KEY
 
 # Define the routes
 
@@ -67,15 +69,23 @@ def search():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-  form = Contact()
- 
-  if request.method == 'POST' and form.validate_on_submit():
-    # Something about actually SENDING the message
-    # somewhere would be good here...
-    flash('Your message has been sent!', 'success')
-    return redirect(url_for('search'))
- 
-  return render_template('contact.html', form=form)
+    # Forms are in forms.py
+    form = Contact()
+
+    if request.method == 'POST' and form.validate_on_submit():
+        # Google App Engine Mail Python API
+        mail.send_mail(sender="{0} <{1}>".format(request.form['name'],
+                                                 request.form['email']),
+                      to=ADMIN_EMAIL,
+                      subject="QuickHop Feedback",
+                      body=request.form['message'])
+
+        flash('Your message has been sent!', 'success')
+        return redirect(url_for('search'))
+    elif request.method == 'POST':
+        flash('Please correct the following errors:', 'error')
+
+    return render_template('contact.html', form=form)
 
 
 @app.route('/about')
