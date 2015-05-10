@@ -2,16 +2,31 @@
 
 {% block title %} FAQ | QuickHop {% endblock %}
 
+{% block image_credit %}
+<span class="right brown-text text-lighten-2 hide-on-small-only" style="font-size: 0.7rem;">
+    Image: "Barcelona" by
+    <a href="https://www.flickr.com/photos/aigle_dore/5238702708" target="_blank"
+    class="brown-text text-darken-2">Moyan Brenn</a>,
+    (<a href="https://creativecommons.org/licenses/by/2.0/" class="brown-text text-darken-2">CC BY 2.0</a>)
+</span>
+{% endblock %}
+
 {% block content %}
+
+    <div class="parallax-container hide-on-small-only" style="height: 400px;">
+        <div class="parallax">
+            <img src="{{ url_for('static', filename='img/barcelona.jpg') }}">
+        </div>
+    </div>
 
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row">
         <div class="col s12 m10 offset-m1">
 
-            <h5 class="header" style="color: #f04c4f;">
+            <h4 class="header" style="color: #f04c4f; margin-bottom: 2rem;">
                 QuickHop FAQ
-            </h5><br>
+            </h4>
 
             <h5 class="subheading">
                 <i class="mdi-image-filter-drama"></i>&nbsp;
