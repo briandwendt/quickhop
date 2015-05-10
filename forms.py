@@ -8,8 +8,8 @@ def strip_whitespace(s):
         s = s.strip()
     return s 
 
-class FindFlights(Form):
 
+class FindFlights(Form):
     origin = StringField('Departure Airport', validators=[
         Length(min=3, max=3, message=(u'3-letter IATA code'))
         ], filters=[strip_whitespace])
@@ -18,11 +18,11 @@ class FindFlights(Form):
         Length(min=3, max=3, message=(u'3-letter IATA code'))
         ], filters=[strip_whitespace])
 
-    # This is the SERVER date (in UTC), maybe not quite right to use this.
+    # This is the SERVER date, maybe not quite right to use this.
     # We really need the LOCALE from the user's device...
     today = datetime.today()
 
-    # List only this year, +/- 1 month
+    # List only this year, +/- 1 year
     year = SelectField('Year', default=str(today.year),
         choices=[(str(today.year-1), str(today.year-1)),
                  (str(today.year+0), str(today.year+0)),
@@ -45,13 +45,6 @@ class FindFlights(Form):
 
 
 class Contact(Form):
-
-    # 
-    # TODO:
-    #
-    # We need a recaptcha or some kind of anti-bot-spam thing here...
-    #
-
     name = StringField('Name', validators=[
         Length(max=50), Required(message=u'A name. Any name will do.') ])
     message = TextAreaField('Comments',

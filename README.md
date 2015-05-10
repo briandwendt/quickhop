@@ -24,12 +24,22 @@ for getting things to work on Google App Engine.
 Next you'll need to manually create the `config.py` file, which should look something
 like the following:
 
-    # CSRF key for Flask-WTF
-    CSRF_SECRET_KEY = 'super secret jibberish'
-    
+    # CSRF for Flask-WTF
+    CSRF_SECRET_KEY = 'supersecretjibberish'
+
     # FlightStats API
-    FS_APP_ID = 'Your FlightStats App ID'
-    FS_APP_KEY = 'Your FlightStats App Key'
+    FS_APP_ID = 'YOUR_FLIGHTSTATS_APP_ID'
+    FS_APP_KEY = 'YOUR_FLIGHTSTATS_APP_KEY'
+
+    # Admin & AppEngine emails for contact form
+    ADMIN_EMAIL = 'Your Name <you@example.com>'
+    APP_EMAIL = '<no-reply@YOUR_GOOGLE_APP_ID.appspotmail.com>'
+
+    # Recaptcha for contact form
+    # https://www.google.com/recaptcha/
+    RECAPTCHA_PUBLIC_KEY = 'YOUR_RECAPTCHA_SITE_KEY'
+    RECAPTCHA_PRIVATE_KEY = 'YOUR_RECAPTCHA_SECRET_KET'
+
 
 Finally you'll need to download and install the [Google App Engine SDK for Python](https://cloud.google.com/appengine/downloads), after which you can run
 
