@@ -1,7 +1,7 @@
 # Flask microframework
 from flask import Flask, request, redirect, render_template, url_for, flash
 from forms import FindFlights, Contact
-from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY, \
+from config import CSRF_SECRET_KEY, FS_APP_ID, FS_APP_KEY, APP_EMAIL, \
                    ADMIN_EMAIL, RECAPTCHA_PUBLIC_KEY, RECAPTCHA_PRIVATE_KEY
 
 # Google AppEngine Mail Python API
@@ -74,11 +74,12 @@ def contact():
 
     if request.method == 'POST' and form.validate_on_submit():
         # Google App Engine Mail Python API
-        mail.send_mail(sender="{0} <{1}>".format(request.form['name'],
-                                                 request.form['email']),
+        message = mail.EmailMessage(
+            sender="{0} {1}".format(request.form['name'], APP_EMAIL),
                       to=ADMIN_EMAIL,
                       subject="QuickHop Feedback",
                       body=request.form['message'])
+        message.send()
 
         flash('Your message has been sent!', 'success')
         return redirect(url_for('search'))

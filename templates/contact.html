@@ -10,8 +10,14 @@
         <div class="col s12 m10 offset-m1">
 
             <h5 class="header" style="color: #f04c4f;">
+                <i class="mdi-notification-sms-failed" style="font-size: 2.1rem;"></i>&nbsp;
                 Talk Hard
-            </h5><br>
+            </h5>
+
+            <p class="light" style="margin: 2rem 0 3rem;">
+              You're anonymous. Really. Give it hell.
+            </p>
+
 
             {% with messages = get_flashed_messages(with_categories=true) %}
               {% if messages %}
@@ -28,23 +34,12 @@
                 {{ form.csrf_token }}
 
                 <div class="row">
-                  <div class="input-field col s12 m6">
+                  <div class="input-field col s12">
                     {{ form.name }}
                     {{ form.name.label }}
                     {% if form.name.errors %}
                       <ul class="errors">
                       {% for error in form.name.errors %}
-                        <li>{{ error }}</li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </div>
-                  <div class="input-field col s12 m6">
-                    {{ form.email }}
-                    {{ form.email.label }}
-                    {% if form.email.errors %}
-                      <ul class="errors">
-                      {% for error in form.email.errors %}
                         <li>{{ error }}</li>
                       {% endfor %}
                       </ul>
@@ -66,7 +61,7 @@
                   </div>
                 </div>
 
-                <div class="row" style="padding-left: 10px;">
+                <div class="row" style="padding-left: 20px;">
                   {{ form.recaptcha }}
                   {% if form.recaptcha.errors %}
                       <ul class="errors" style="margin-top: 20px;">
@@ -77,9 +72,9 @@
                     {% endif %}
                 </div>
 
-                <div class="center">
+                <div style="margin: 40px auto;">
                   <button class="btn-large waves-effect waves-light"
-                    style="background-color: #f04c4f; min-width: 30%;" type="submit">
+                    style="background-color: #f04c4f; min-width: 40%;" type="submit">
                     <i class="mdi-content-send right"></i>
                     Send
                   </button>

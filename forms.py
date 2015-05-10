@@ -54,9 +54,6 @@ class Contact(Form):
 
     name = StringField('Name', validators=[
         Length(max=50), Required(message=u'A name. Any name will do.') ])
-    email = StringField('Email',
-        validators=[ Email(message=u'Let\'s try a VALID email address.') ])
     message = TextAreaField('Comments',
         validators=[ Required(message=u'You really should say SOMEthing.') ])
     recaptcha = RecaptchaField()
-
