@@ -18,9 +18,9 @@ class FindFlights(Form):
         Length(min=3, max=3, message=(u'3-letter IATA code'))
         ], filters=[strip_whitespace])
 
-    # This is the SERVER date, maybe not quite right to use this.
-    # We really need the LOCALE from the user's device...
-    today = datetime.today()
+    # This mostly corrects for UTC -- as long as the user is in CDT :/
+    # TODO: Get user's locale (if this is even really possible)
+    today = datetime.today() - timedelta(hours=5)
 
     # List only this year, +/- 1 year
     year = SelectField('Year', default=str(today.year),
@@ -41,7 +41,7 @@ class FindFlights(Form):
     days = [( (today+timedelta(days=i)).strftime('%d'),
            (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,3)]
 
-    day = SelectField('Day', default=today.strftime("%d"), choices=days)
+    day = SelectField('Day', default=today.day, choices=days)
 
 
 class Contact(Form):
