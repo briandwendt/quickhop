@@ -235,3 +235,8 @@ ul.errors li {
     font-size: 1.3rem;
   }
 }
+
+/* datepicker */
+.picker__weekday-display {
+  display: none;
+}

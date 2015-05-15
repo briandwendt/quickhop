@@ -3,6 +3,16 @@
 
     $('.parallax').parallax();
 
+    $('.datepicker').pickadate({
+        format: 'mmmm d, yyyy',  // what the user sees
+        formatSubmit: 'yyyy/mm/dd',  // what the server sees
+        hiddenName: true,  // only submit the formatSubmit value
+        closeOnSelect: true,  // this doesn't work right now...
+        close: 'Close',  // label on 'close' button
+        min: -7,  // date range min (relative to today)
+        max: 4  // date range max (relative to today)
+    });
+
     $('select').material_select();
 
     $('.button-collapse').sideNav();

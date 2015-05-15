@@ -65,38 +65,17 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s4">
-                    {{ form.month }}
-                    {{ form.month.label }}
-                    {% if form.month.errors %}
-                      <ul class="errors">
-                      {% for error in form.month.errors %}
-                        <li>{{ error }}</li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </div>
-                  <div class="input-field col s4">
-                    {{ form.day }}
-                    {{ form.day.label }}
-                    {% if form.day.errors %}
-                      <ul class="errors">
-                      {% for error in form.day.errors %}
-                        <li>{{ error }}</li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </div>
-                  <div class="input-field col s4">
-                    {{ form.year }}
-                    {{ form.year.label }}
-                    {% if form.year.errors %}
-                      <ul class="errors">
-                      {% for error in form.year.errors %}
-                        <li>{{ error }}</li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
+                  <div class="input-field col s6">
+                  <script type="text/javascript">
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth()+1;
+                    var yyyy = today.getFullYear();
+                    today = yyyy+'/'+mm+'/'+dd;
+                  </script>
+                    <input type="date" class="datepicker"
+                      data-value="<script>document.write(today);</script>">
+                    <label class="active">Date</label>
                   </div>
                 </div>
 
