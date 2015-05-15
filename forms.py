@@ -23,7 +23,7 @@ class FindFlights(Form):
     today = datetime.today() - timedelta(hours=5)
 
     # List only this year, +/- 1 year
-    year = SelectField('Year', default=str(today.year),
+    year = SelectField('Year', default=today.strftime("%Y"),
         choices=[(str(today.year-1), str(today.year-1)),
                  (str(today.year+0), str(today.year+0)),
                  (str(today.year+1), str(today.year+1))])
@@ -31,17 +31,17 @@ class FindFlights(Form):
     # List only this month, +/- 1 month
     # TODO: I don't really like how we're doing this here, with the
     #       timedelta(weeks=4) crap. Seems flimsy.
-    months = [(str(today.month-1), (today-timedelta(weeks=4)).strftime("%b")),
-              (str(today.month), today.strftime("%b")),
-              (str(today.month+1), (today+timedelta(weeks=4)).strftime("%b"))]
+    months = [((today-timedelta(weeks=4)).strftime("%m"), (today-timedelta(weeks=4)).strftime("%b")),
+              (today.strftime("%m"), today.strftime("%b")),
+              ((today+timedelta(weeks=4)).strftime("%m"), (today+timedelta(weeks=4)).strftime("%b"))]
 
-    month = SelectField('Month', default=today.month, choices=months)
+    month = SelectField('Month', default=today.strftime("%m"), choices=months)
 
     # List only today +3/-1 days (FlightStats +3/-7 search limitation)
     days = [( (today+timedelta(days=i)).strftime('%d'),
-           (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,3)]
+           (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,4)]
 
-    day = SelectField('Day', default=today.day, choices=days)
+    day = SelectField('Day', default=today.strftime("%d"), choices=days)
 
 
 class Contact(Form):
