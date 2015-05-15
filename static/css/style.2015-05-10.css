@@ -237,8 +237,14 @@ ul.errors li {
 }
 
 /* datepicker */
+.picker {
+  z-index: 30000;
+}
 .picker__weekday-display {
-  display: none;
+  /*display: none;*/
+}
+.picker__date-display {
+  display: none; 
 }
 .picker__date-display {
   padding-top: 15px;
