@@ -61,9 +61,9 @@ def search():
         return redirect(url_for('flights',
             origin = request.form['origin'].upper().strip(),
             destination = request.form['destination'].upper().strip(),
-            year = request.form['year'],
-            month = request.form['month'],
-            day = request.form['day']))
+            year = request.form['date'].split('/')[0],
+            month = request.form['date'].split('/')[1],
+            day = request.form['date'].split('/')[2]))
     elif request.method == 'POST':
         flash('Please correct the following errors:')
 

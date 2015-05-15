@@ -240,3 +240,17 @@ ul.errors li {
 .picker__weekday-display {
   display: none;
 }
+.picker__date-display {
+  padding-top: 15px;
+}
+.picker__date-display,
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected {
+  background-color: #f04c4f;
+}
+.picker__close,
+.picker__today,
+.picker__day.picker__day--today {
+  color: #f04c4f;
+}
