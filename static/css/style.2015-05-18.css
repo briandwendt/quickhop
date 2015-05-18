@@ -241,14 +241,24 @@ ul.errors li {
   z-index: 30000;
 }
 .picker__weekday-display {
-  /*display: none;*/
+  display: none;
+}
+.picker__year-display {
+  display: none;
+}
+.picker__month-display {
+  font-size: 1.6rem;
+}
+.picker__day-display {
+  font-size: 3.0rem;
 }
 .picker__date-display {
-  display: none; 
+  /*display: none;*/ 
 }
 .picker__date-display {
   padding-top: 15px;
 }
+
 .picker__date-display,
 .picker__day--selected,
 .picker__day--selected:hover,
