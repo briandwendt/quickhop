@@ -8,9 +8,11 @@
         formatSubmit: 'yyyy/mm/dd',  // what the server sees
         hiddenName: true,  // only submit the formatSubmit value
         closeOnSelect: true,  // this doesn't work right now...
+        today: '', // let's hide this button
+        clear: '', // and this one too -- why clear the form?
         close: 'Close',  // label on 'close' button
         min: -3,  // date range min (relative to today)
-        max: 3  // date range max (relative to today)
+        max: 2  // date range max (relative to today)
     });
 
     $('select').material_select();

@@ -240,6 +240,12 @@ ul.errors li {
 .picker {
   z-index: 30000;
 }
+.picker__footer {
+  text-align: center;
+}
+.picker__close {
+  width: 100%;
+}
 .picker__weekday-display {
   display: none;
 }

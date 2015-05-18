@@ -52,10 +52,6 @@ def search():
     # Forms are in forms.py
     form = FindFlights()
 
-    # Checking server time (for debugging)
-    # from datetime import timedelta
-    # time = datetime.today() - timedelta(hours=5)
-
     # If the completed form validates, show the flights list
     if request.method == 'POST' and form.validate_on_submit():
         return redirect(url_for('flights',
