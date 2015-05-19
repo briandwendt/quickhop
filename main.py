@@ -158,7 +158,7 @@ def flights(origin, destination, year, month, day):
         return redirect(url_for('search'))
 
     if count == 0:
-        flash('No flights found for {0} to {1}.'.format(origin, destination), 'error')
+        flash('No flights found for {0} to {1} on {2}/{3}/{4}.'.format(origin, destination, month, day, year), 'error')
         return redirect(url_for('search'))
 
     # Render the flights list page

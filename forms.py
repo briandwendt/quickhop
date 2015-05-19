@@ -18,7 +18,7 @@ class FindFlights(Form):
         Length(min=3, max=3, message=(u'3-letter IATA code'))
         ], filters=[strip_whitespace])
 
-    # See /static/js/init.js for datepicker parameters
+    # See /static/js/init.js for date field parameters
     date = DateField(format='%Y/%m/%d')
 
 
