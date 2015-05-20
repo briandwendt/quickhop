@@ -14,7 +14,7 @@ QuickHop is live at [QuickHop.info](http://quickhop.info/).
 
 #### To Run Locally
 
-Download or clone this repo, then navigate to the `quickhop-mobile` directory and run
+Download or clone this repo, then navigate to the `quickhop` directory and run
 
     pip install -r requirements.txt -t lib/
 
