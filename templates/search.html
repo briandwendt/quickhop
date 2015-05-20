@@ -42,7 +42,7 @@
 
                 <div class="row">
                   <div class="input-field col s6">
-                    {{ form.origin(class_="validate", placeholder="CDG") }}
+                    {{ form.origin(class_="validate", placeholder="CDG", length="3") }}
                     {{ form.origin.label(class_="truncate") }}
                     {% if form.origin.errors %}
                       <ul class="errors">
@@ -53,7 +53,7 @@
                     {% endif %}
                   </div>
                   <div class="input-field col s6">
-                    {{ form.destination(class_="validate", placeholder="VCE") }}
+                    {{ form.destination(class_="validate", placeholder="VCE", length="3") }}
                     {{ form.destination.label(class_="truncate") }}
                     {% if form.destination.errors %}
                       <ul class="errors">
@@ -65,34 +65,20 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s4">
-                    {{ form.month }}
-                    {{ form.month.label }}
-                    {% if form.month.errors %}
+                  <div class="input-field col s12 m8 offset-m2">
+                    <script>
+                      var today = new Date();
+                      var dd = today.getDate();
+                      var mm = today.getMonth()+1;
+                      var yyyy = today.getFullYear();
+                      today = yyyy+'/'+mm+'/'+dd;
+                    </script>
+                    <input type="date" class="datepicker" name="date"
+                      data-value="document.write(today)">
+                    <label class="active">Date</label>
+                    {% if form.date.errors %}
                       <ul class="errors">
-                      {% for error in form.month.errors %}
-                        <li>{{ error }}</li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </div>
-                  <div class="input-field col s4">
-                    {{ form.day }}
-                    {{ form.day.label }}
-                    {% if form.day.errors %}
-                      <ul class="errors">
-                      {% for error in form.day.errors %}
-                        <li>{{ error }}</li>
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </div>
-                  <div class="input-field col s4">
-                    {{ form.year }}
-                    {{ form.year.label }}
-                    {% if form.year.errors %}
-                      <ul class="errors">
-                      {% for error in form.year.errors %}
+                      {% for error in form.date.errors %}
                         <li>{{ error }}</li>
                       {% endfor %}
                       </ul>

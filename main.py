@@ -52,18 +52,14 @@ def search():
     # Forms are in forms.py
     form = FindFlights()
 
-    # Checking server time (for debugging)
-    # from datetime import timedelta
-    # time = datetime.today() - timedelta(hours=5)
-
     # If the completed form validates, show the flights list
     if request.method == 'POST' and form.validate_on_submit():
         return redirect(url_for('flights',
             origin = request.form['origin'].upper().strip(),
             destination = request.form['destination'].upper().strip(),
-            year = request.form['year'],
-            month = request.form['month'],
-            day = request.form['day']))
+            year = request.form['date'].split('/')[0],
+            month = request.form['date'].split('/')[1],
+            day = request.form['date'].split('/')[2]))
     elif request.method == 'POST':
         flash('Please correct the following errors:')
 
@@ -162,7 +158,7 @@ def flights(origin, destination, year, month, day):
         return redirect(url_for('search'))
 
     if count == 0:
-        flash('No flights found for {0} to {1}.'.format(origin, destination), 'error')
+        flash('No flights found for {0} to {1} on {2}/{3}/{4}.'.format(origin, destination, month, day, year), 'error')
         return redirect(url_for('search'))
 
     # Render the flights list page

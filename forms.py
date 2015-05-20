@@ -1,5 +1,5 @@
 from flask_wtf import Form, RecaptchaField
-from wtforms import StringField, SelectField, TextAreaField
+from wtforms import StringField, DateField, TextAreaField
 from wtforms.validators import Length, Required, Email
 from datetime import date, time, datetime, timedelta
 
@@ -18,30 +18,8 @@ class FindFlights(Form):
         Length(min=3, max=3, message=(u'3-letter IATA code'))
         ], filters=[strip_whitespace])
 
-    # This mostly corrects for UTC -- as long as the user is in CDT :/
-    # TODO: Get user's locale (if this is even really possible)
-    today = datetime.today() - timedelta(hours=5)
-
-    # List only this year, +/- 1 year
-    year = SelectField('Year', default=today.strftime("%Y"),
-        choices=[(str(today.year-1), str(today.year-1)),
-                 (str(today.year+0), str(today.year+0)),
-                 (str(today.year+1), str(today.year+1))])
-
-    # List only this month, +/- 1 month
-    # TODO: I don't really like how we're doing this here, with the
-    #       timedelta(weeks=4) crap. Seems flimsy.
-    months = [((today-timedelta(weeks=4)).strftime("%m"), (today-timedelta(weeks=4)).strftime("%b")),
-              (today.strftime("%m"), today.strftime("%b")),
-              ((today+timedelta(weeks=4)).strftime("%m"), (today+timedelta(weeks=4)).strftime("%b"))]
-
-    month = SelectField('Month', default=today.strftime("%m"), choices=months)
-
-    # List only today +3/-1 days (FlightStats +3/-7 search limitation)
-    days = [( (today+timedelta(days=i)).strftime('%d'),
-           (today+timedelta(days=i)).strftime('%d') ) for i in range(-1,4)]
-
-    day = SelectField('Day', default=today.strftime("%d"), choices=days)
+    # See /static/js/init.js for date field parameters
+    date = DateField(format='%Y/%m/%d')
 
 
 class Contact(Form):
