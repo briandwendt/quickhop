@@ -264,7 +264,6 @@ ul.errors li {
 .picker__date-display {
   padding-top: 15px;
 }
-
 .picker__date-display,
 .picker__day--selected,
 .picker__day--selected:hover,
@@ -275,4 +274,13 @@ ul.errors li {
 .picker__today,
 .picker__day.picker__day--today {
   color: #f04c4f;
+}
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+  background: transparent;
+}
+button.picker__today:focus,
+button.picker__clear:focus,
+button.picker__close:focus {
+  background-color: transparent;
 }
